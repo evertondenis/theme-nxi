@@ -1,8 +1,29 @@
 /* Bootstrap core CSS */
 @import url('../lib/bootstrap/3.3.6/css/bootstrap.min.css');
+@import "mixins.scss";
 
 /* Custom styles for this template */
 body { 
     padding-top: 60px;
     padding-bottom: 40px;
+}
+
+.navbar-inverse {
+	.navbar-nav > {
+		.current_page_item > {
+			a {
+				@include bg-menu(#fff, #080808);
+
+				&:hover {
+					@include bg-menu(#fff, #080808);
+				}
+				&:focus {
+					@include bg-menu(#fff, #080808);	
+				}
+			}
+		}
+		.current_page_parent > {
+			@extend .current_page_item;
+		}
+	}
 }

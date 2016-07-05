@@ -1,0 +1,4 @@
+@mixin bg-menu($txt-color, $bg-color) {
+	color: $txt-color;
+	background-color: $bg-color;
+}

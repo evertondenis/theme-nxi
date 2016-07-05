@@ -15,8 +15,8 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build-css', function() {
-	return gulp.src('scss/**/*.scss')
-		.pipe(sass({outputStyle: 'compressed'}).on('erros', sass.logError))
+	return gulp.src('scss/nextidea.scss')
+		.pipe(sass({outputStyle: 'expanded'}).on('erros', sass.logError))
 		.pipe(gulp.dest('css'));
 });
 
