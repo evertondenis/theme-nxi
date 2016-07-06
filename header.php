@@ -22,24 +22,25 @@
     </head>
 
     <body>
-
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <header class="nxi-header">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <?php wp_list_pages(array('title_li' => '', 'exclude' => 4282)); ?>
-                    </ul>
-                </div><!--/.navbar-collapse -->
+                <h1 class="nxi-logo"><a href="/" title="Next Idea, uma agência de Inbound Marketing">Next Idea</a></h1>
+                <nav class="navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <?php wp_list_pages(array('title_li' => '', 'exclude' => 4282)); ?>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </header>
 
-        <div class="container">
+        

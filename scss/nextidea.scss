@@ -3,13 +3,64 @@
 @import "mixins.scss";
 
 /* Custom styles for this template */
-body { 
-    padding-top: 60px;
-    padding-bottom: 40px;
+body {
+    font-family: Arial, Tahoma, Helvetica, Sans-serif;
 }
+.nxi-header {
+    background: none;
+    height: 105px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+}
+.nxi-logo {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
+    a {
+    	background-image: url(../../images/logo-next-idea-big.png);
+    	height: 62px;
+    	width: 143px;
+    	text-indent: -9999px;
+	    overflow: hidden;
+	    background-repeat: no-repeat;
+	    background-position: left center;
+	    display: inline-block;
+	    background-size: contain;
+    }
+}
+.nxi-banner {
+	padding-top: 104px;
+}
+.navbar {
+	position: static;
+    width: auto;
+    background: transparent;
+    display: block;
+    list-style: none;
+    float: right;
+    box-shadow: none;
+    transform: translateX(0);
+    padding: 55px 0 0;
+    margin-bottom: 0px;
+}
 .navbar-inverse {
+	background-color: transparent !important;
+    border: none !important;
+
 	.navbar-nav > {
+		li > {
+			a {
+				color: #fff;
+				text-transform: uppercase;
+				&:hover {
+					color: #9d9d9d;
+				}
+			}
+		}
 		.current_page_item > {
 			a {
 				@include bg-menu(#fff, #080808);
@@ -26,4 +77,8 @@ body {
 			@extend .current_page_item;
 		}
 	}
+}
+.nxi-banner {
+	background-image: linear-gradient(to right, #4f1985, #197d9a);
+    color: white;
 }
