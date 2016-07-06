@@ -38,15 +38,6 @@
                     <ul class="nav navbar-nav">
                         <?php wp_list_pages(array('title_li' => '', 'exclude' => 4282)); ?>
                     </ul>
-                    <!-- <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Sign in</button>
-                    </form> -->
                 </div><!--/.navbar-collapse -->
             </div>
         </nav>

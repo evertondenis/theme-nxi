@@ -17,7 +17,7 @@ gulp.task('clean', function() {
 gulp.task('build-css', function() {
 	return gulp.src('scss/nextidea.scss')
 		.pipe(sass({outputStyle: 'expanded'}).on('erros', sass.logError))
-		.pipe(gulp.dest('css'));
+		.pipe(gulp.dest('assets/css'));
 });
 
 // gulp.task('htmlmin', function() {
