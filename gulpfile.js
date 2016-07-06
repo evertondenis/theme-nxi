@@ -1,36 +1,28 @@
-/* gulp packages */
 var gulp 		= require('gulp');
-var	gutil 		= require('gulp-util');
 var	clean 		= require('gulp-clean');
 var	sass 		= require('gulp-sass');
+var sourcemaps	= require('gulp-sourcemaps');
 var watch 		= require('gulp-watch');
-var	htmlmin 	= require('gulp-htmlmin');
 var	runSequence = require('run-sequence');
 
-
-/* task */
 gulp.task('clean', function() {
 	return gulp.src('css/')
 		.pipe(clean());
 });
 
-gulp.task('build-css', function() {
+gulp.task('sass', function() {
 	return gulp.src('scss/nextidea.scss')
-		.pipe(sass({outputStyle: 'expanded'}).on('erros', sass.logError))
-		.pipe(gulp.dest('assets/css'));
+		.pipe(sourcemaps.init())
+	    .pipe(sass().on('error', sass.logError))
+	    .pipe(sass({outputStyle: 'extended'}))
+	    .pipe(sourcemaps.write())
+	    .pipe(gulp.dest('assets/css'));
 });
 
-// gulp.task('htmlmin', function() {
-// 	return gulp.src('src/*.html')
-// 		.pipe(htmlmin({collapseWhitespace: true}))
-// 		.pipe(gulp.dest('dist/'))
-// });
-
 gulp.task('watch', function() {
-	gulp.watch('scss/**/*.scss', ['build-css']);
-	// gulp.watch('src/*.html', ['htmlmin']);
+	gulp.watch('scss/**/*.scss', ['sass']);
 });
 
 gulp.task('default', function(cb) {
-	return runSequence('clean', ['watch', 'build-css'], cb)
+	return runSequence('clean', ['watch', 'sass'], cb)
 });
