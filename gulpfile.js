@@ -1,6 +1,7 @@
 var gulp 		= require('gulp');
 var	clean 		= require('gulp-clean');
 var	sass 		= require('gulp-sass');
+var rename		= require('gulp-rename');
 var sourcemaps	= require('gulp-sourcemaps');
 var watch 		= require('gulp-watch');
 var	runSequence = require('run-sequence');
@@ -11,11 +12,12 @@ gulp.task('clean', function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('scss/nextidea.scss')
+	return gulp.src('scss/**/*.scss')
 		.pipe(sourcemaps.init())
 	    .pipe(sass().on('error', sass.logError))
 	    .pipe(sass({outputStyle: 'extended'}))
 	    .pipe(sourcemaps.write())
+	    .pipe(rename('nextidea.css'))
 	    .pipe(gulp.dest('assets/css'));
 });
 

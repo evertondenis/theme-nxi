@@ -22,9 +22,9 @@
     </head>
 
     <body>
-        <header class="nxi-header">
+        <header class="header">
             <div class="container">
-                <h1 class="nxi-logo"><a href="/" title="Next Idea, uma agência de Inbound Marketing">Next Idea</a></h1>
+                <h1 class="logo"><a href="/" title="Next Idea, uma agência de Inbound Marketing">Next Idea</a></h1>
                 <nav class="navbar navbar-inverse">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

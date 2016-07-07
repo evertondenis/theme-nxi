@@ -1,6 +1,20 @@
             <footer>
             	<div class="container">
-            		<p>&copy; Company 2016</p>
+            		<h1><a href="/" title="Next Idea, uma agência de Inbound Marketing"><img class="img-responsive" src="http://new.nextidea/wp-content/themes/nextidea/images/logo-next-idea-middle.png" width="131" height="57" alt="Titulo Imagem"></a></h1>
+            	</div>
+            	<div class="container">
+            		<div class="col-md-4 text-center">
+            			<p>São Paulo/SP</p>
+            			<p>+55 11 3280-4320</p>
+            		</div>
+					<div class="col-md-4 text-center">
+						<p>Joinville/SC</p>
+						<p>+55 11 3280-4320</p>
+					</div>
+					<div class="col-md-4 text-center">
+						<p>Rua São Paulo, 31,</p>
+						<p>Sala 10, Joinville / SC</p>
+					</div>
             	</div>                
             </footer>
         <?php wp_footer(); ?>
