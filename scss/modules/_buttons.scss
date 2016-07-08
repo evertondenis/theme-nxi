@@ -1,0 +1,53 @@
+.btn-primary {
+	
+	margin: 20px 0;
+	font-family: $roboto-regular;
+	font-size: 16px;
+	text-transform: uppercase;
+    color: $white;
+    background-color: $orange;
+    border-color: $orange;
+
+    &:active {
+    	@extend .btn-primary;
+    }
+    &:focus {
+    	@extend .btn-primary;
+    }
+    &:visited {
+    	@extend .btn-primary;
+    }
+
+	span {
+		position: relative;
+		left: 0;
+		-webkit-transition: all .2s ease-out;
+	    -moz-transition: all .2s ease-out;
+	    -ms-transition: all .2s ease-out;
+	    -o-transition: all .2s ease-out;
+	    transition: all .2s ease-out;
+	}
+	i {
+		margin-left: 10px;
+		-webkit-transition: all .2s ease-out;
+	    -moz-transition: all .2s ease-out;
+	    -ms-transition: all .2s ease-out;
+	    -o-transition: all .2s ease-out;
+	    transition: all .2s ease-out;
+	}
+
+    &:hover {
+    	background-color: $white !important;
+    	border-color: $white !important;
+    	left: -10px;
+
+    	i {
+    		margin-left: 20px;
+    		color: $purple;
+    	}
+    	span {
+    		left: -5px;
+    		color: $purple;
+    	}
+    }
+}

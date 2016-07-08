@@ -2,21 +2,22 @@
 
 <section class="banner">
 	<div class="container">
-		<h1>Aumente os seus resultados</h1>
-		<p>E-mails diários abordando conceito e inovações que farão o seu negócio avançar utilizando o inbound marketing.</p>
-
-		<p><a class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+		<div class="col-md-6">
+			<h1>Aumente os seus resultados</h1>
+			<p>E-mails diários abordando conceito e inovações que farão o seu negócio avançar utilizando o inbound marketing.</p>
+			<p><a class="btn btn-primary btn-lg" href="#"><span>Learn more</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+		</div>
 	</div>
 </section>
 <section class="inbound">
 	<div class="container">
 		<div class="col-md-6">
-			<h1>AUMENTE SUAS VENDAS COM INBOUND MARKETING</h1>
+			<h1>AUMENTE SUAS VENDAS COM <strong>INBOUND MARKETING</strong></h1>
 		</div>
 		<div class="col-md-6">
 			<h2>LOREM IPSUM DOLLOR PORQUE LOREM IPSUM É BOM</h2>
 			<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet oin gravida nibh .</p>
-			<p><a class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+			<p><a class="btn btn-primary btn-lg" href="#"><span>Learn more</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 		</div>
 	</div>
 </section>
@@ -29,7 +30,7 @@
 					<h1>Case de Sucesso</h1>
 					<h2>Consumidores conectados à marca</h2>
 					<p>Com um planejamento estratégico digital desenhado pela Next Idea, agência de Inbound Marketing, a Condor Pinceis iniciou ações para que sua presença digital refletisse toda qualidade que apresenta no mercado.</p>
-					<p><a class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+					<p><a class="btn btn-primary btn-lg" href="#"><span>Learn more</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 				</div>
 				<div class="col-md-8">
 					<img class="img-responsive" src="http://new.nextidea/wp-content/themes/nextidea/images/case-exem.png" width="675" height="721" alt="Titulo Imagem">
@@ -39,10 +40,8 @@
 	</section>
 	<section class="cta">
 		<div class="container text-center">
-			<h1>Aumente os seus resultados</h1>
-			<p>E-mails diários abordando conceito e inovações que farão o seu negócio avançar utilizando o inbound marketing.</p>
-
-			<p><a class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+			<h1>Conheça as <strong>ideias</strong><br>que <strong>transformam</strong><br>o <strong>seu negócio</strong></h1>
+			<p><a class="btn btn-primary btn-lg" href="#"><span>Agende uma reunião</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 		</div>
 	</section>	
 </div>
@@ -55,7 +54,7 @@
 		<div class="col-md-6">
 			<h2>LOREM IPSUM DOLLOR PORQUE LOREM IPSUM É BOM</h2>
 			<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet oin gravida nibh .</p>
-			<p><a class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+			<p><a class="btn btn-primary btn-lg" href="#"><span>Conheça mais o inbound</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 		</div>
 	</div>
 </section>
@@ -69,12 +68,12 @@
 <section class="certificados">
 	<div class="container">
 		<div class="row">
-			<h1>Nós somos certificados</h1>
+			<h1><span>Nós somos</span><br>certificados</h1>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
 				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-				<p><a class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+				<p><a class="btn btn-primary btn-lg" href="#"><span>Learn more</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 			</div>
 			<div class="col-md-4">
 				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
@@ -88,8 +87,8 @@
 
 <section class="newsletter">
 	<div class="container">
-		<div class="row">
-			<h1>Cadastre-se e receba dicas de como aumentar as suas vendas</h1>
+		<div class="row text-center">
+			<h1>Cadastre-se e receba<br>dicas de como aumentar<br>as suas vendas</h1>
 		</div>
 		<div class="row text-center">
 			<form class="navbar-form">
@@ -99,7 +98,7 @@
                 <div class="form-group">
                     <input type="text" placeholder="Qual o seu e-mail" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-success">Cadastrar e-mail</button>
+                <button type="submit" class="btn btn-primary btn-lg"><span>Cadastrar e-mail</span><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
             </form>
 		</div>
 	</div>

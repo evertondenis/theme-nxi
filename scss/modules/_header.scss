@@ -8,7 +8,7 @@
     width: 100%;
 }
 .navbar {
-	font-family: $font-regular;
+	font-family: $roboto-regular;
 	position: static;
     width: auto;
     background: transparent;
@@ -27,7 +27,7 @@
 	.navbar-nav > {
 		li > {
 			a {
-				font-family: $font-regular;
+				font-family: $roboto-regular;
 				color: $white;
 				text-transform: uppercase;
 				&:hover {

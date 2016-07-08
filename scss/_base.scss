@@ -1,6 +1,21 @@
 body {
-    font-family: $font-regular;
+    font-family: $roboto-regular;
     color: $gray;
+}
+h1 {
+    font-size: $title;
+    line-height: 90%;
+    font-family: $roboto-regular;
+    span {
+        font-size: $title-span;
+        font-family: $roboto-regular;
+    }
+    strong {
+        font-family: $roboto-bold;
+    }
+}
+h2 {
+    font-size: $sub-title;
 }
 .row {
     margin: 0px !important;
@@ -23,7 +38,7 @@ body {
     }
 }
 .banner {
-	padding-top: 104px;
+	padding-top: 150px;
     background: transparent url(../../images/banner-1.jpg) center no-repeat;
     height: 830px;
     color: $white;
@@ -31,10 +46,28 @@ body {
 .inbound {
     background-color: $bg-gray-light;
     padding-bottom: $padding-section;
+
+    h1 {
+        color: $purple;
+        font-family: $roboto-regular;
+    }
+    h2 {
+        color: $purple;
+        font-family: $roboto-regular;
+    }
 }
 #inbound-cases {
     background: $white url(../../images/bg-inbound-cases.jpg) top center no-repeat;
     min-height: 820px;
+
+    h1 {
+        font-family: $roboto-light;
+        color: $purple;
+    }
+    h2 {
+        font-family: $roboto-regular;
+        color: $purple;
+    }
 }
 .cases-home {
     padding-bottom: $padding-section;
@@ -46,18 +79,58 @@ body {
     background-image: linear-gradient(to right, #8527dc, #29ccfb);
     color: $white;
     padding: $padding-section 0;
+    h1 {
+        color: $white;
+        font-family: $roboto-regular;
+    }
+    h2 {
+        color: $white;
+        font-family: $roboto-regular;
+    }
 }
 .depoimentos {
     background: $white url(../../images/title-depoimentos.png) center $padding-section no-repeat;
     padding: $padding-section 0;
     min-height: 600px;
+    h1 {
+        color: $purple;
+        font-family: $roboto-regular;
+    }
+    h2 {
+        color: $purple;
+        font-family: $roboto-regular;
+    }
 }
 .certificados {
     background-color: $bg-gray-light;
     padding: $padding-section 0;
+    h1 {
+        color: $purple;
+        font-family: $roboto-light;
+        text-transform: uppercase;
+        span {
+            color: $gray;
+            font-family: $roboto-light;
+            text-transform: uppercase;
+        }
+    }
+    h2 {
+        color: $purple;
+        font-family: $roboto-light;
+    }
 }
 .newsletter {
-    @extend .materiais;
+    background-image: linear-gradient(to right, #8527dc, #29ccfb);
+    color: $white;
+    padding: $padding-section 0;
+    h1 {
+        color: $white;
+        font-family: $roboto-light;
+    }
+    h2 {
+        color: $white;
+        font-family: $roboto-light;
+    }
 }
 footer {
     background: $white url(../../images/title-contato.png) center $padding-section no-repeat;

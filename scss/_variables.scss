@@ -1,12 +1,15 @@
 $padding-section: 70px;
+$title: 70px;
+$title-span: 50px;
+$sub-title: 26px;
 
 ////
 // Fonts
 ////
-$font-regular: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
-$font-bold: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
-$font-light: roboto-light, arial, helvetica, verdana, tahoma, sans-serif;
-$font-italic: roboto-italic, arial, helvetica, verdana, tahoma, sans-serif;
+$roboto-regular: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
+$roboto-bold: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
+$roboto-light: roboto-light, arial, helvetica, verdana, tahoma, sans-serif;
+$roboto-italic: roboto-italic, arial, helvetica, verdana, tahoma, sans-serif;
 
 ////
 // Colors
@@ -18,6 +21,7 @@ $blue-light: #0ED6F4;
 $gray: #3A3C44;
 $gray-light: #44444B;
 $orange: #FB3B0E;
+$orange-hover: #F89406;
 
 ////
 // Backgrounds Colors
