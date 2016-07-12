@@ -2,6 +2,7 @@ body {
     font-family: $roboto-regular;
     color: $gray;
 }
+
 h1 {
     font-size: $title;
     line-height: 90%;
@@ -14,12 +15,25 @@ h1 {
         font-family: $roboto-bold;
     }
 }
+
 h2 {
     font-size: $sub-title;
+    a {
+        text-decoration: none;
+        color: $purple;
+        font-family: $roboto-regular;
+        
+        &:hover {
+            text-decoration: none;
+            color: $orange;
+        }
+    }
 }
+
 .row {
     margin: 0px !important;
 }
+
 .logo {
 	position: absolute;
     top: 50%;
@@ -37,12 +51,14 @@ h2 {
 	    background-size: contain;
     }
 }
+
 .banner {
 	padding-top: 150px;
-    background: transparent url(../../images/banner-1.jpg) center no-repeat;
-    height: 830px;
+    // background: transparent url(../../images/banner-1.jpg) center no-repeat;
+    min-height: 830px;
     color: $white;
 }
+
 .inbound {
     background-color: $bg-gray-light;
     padding-bottom: $padding-section;
@@ -56,38 +72,64 @@ h2 {
         font-family: $roboto-regular;
     }
 }
+
 #inbound-cases {
     background: $white url(../../images/bg-inbound-cases.jpg) top center no-repeat;
     min-height: 820px;
 
     h1 {
         font-family: $roboto-light;
+        text-transform: uppercase;
         color: $purple;
+        text-transform: uppercase;
+        span {
+            color: $gray;
+            font-family: $roboto-light;
+            text-transform: uppercase;
+        }
     }
     h2 {
         font-family: $roboto-regular;
         color: $purple;
     }
+    .content {
+        padding-top: $padding-col-case;
+    }
 }
+
 .cases-home {
     padding-bottom: $padding-section;
 }
+
 .cta {
     @extend .cases-home;
 }
+
 .materiais {
     background-image: linear-gradient(to right, #8527dc, #29ccfb);
     color: $white;
     padding: $padding-section 0;
+    p {
+        font-family: $roboto-regular;
+        font-size: 40px;
+        line-height: 100%;
+    }
     h1 {
         color: $white;
-        font-family: $roboto-regular;
+        font-family: $roboto-light;
+        text-transform: uppercase;
+        span {
+            font-family: $roboto-light;
+            text-transform: uppercase;
+        }
     }
     h2 {
         color: $white;
-        font-family: $roboto-regular;
+        font-family: $roboto-light;
+        text-transform: uppercase;
     }
 }
+
 .depoimentos {
     background: $white url(../../images/title-depoimentos.png) center $padding-section no-repeat;
     padding: $padding-section 0;
@@ -101,6 +143,7 @@ h2 {
         font-family: $roboto-regular;
     }
 }
+
 .certificados {
     background-color: $bg-gray-light;
     padding: $padding-section 0;
@@ -119,6 +162,7 @@ h2 {
         font-family: $roboto-light;
     }
 }
+
 .newsletter {
     background-image: linear-gradient(to right, #8527dc, #29ccfb);
     color: $white;
@@ -126,13 +170,102 @@ h2 {
     h1 {
         color: $white;
         font-family: $roboto-light;
+        text-transform: uppercase;
     }
     h2 {
         color: $white;
         font-family: $roboto-light;
+        text-transform: uppercase;
     }
 }
+
+.img-circle { max-width: 190px;}
+
 footer {
-    background: $white url(../../images/title-contato.png) center $padding-section no-repeat;
+    background: $white url(../../images/title-contato.png) center 200px no-repeat;
     padding: $padding-section 0;
+
+    .logo-footer {
+        width: 131px;
+    }
+
+    ul {
+        margin-top: 35px;
+        li {
+            display: inline;
+            list-style: none;
+            margin: 0 5px;
+        }
+        li:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    .fa {
+        font-size: 15px;
+    }
+    .fa-facebook {
+        font-size: 21px;
+        color: #fff;
+        background-color: #5c61c4;
+        border-radius: 50%;
+        padding: 9px 13px;
+    }
+    .fa-twitter {
+        font-size: 22px;
+        color: #fff;
+        background-color: #28a1e7;
+        border-radius: 50%;
+        padding: 8px 9px;
+    }
+    .fa-google-plus {
+        font-size: 19px;
+        color: #fff;
+        background-color: #f60c38;
+        border-radius: 50%;
+        padding: 10px 7px;
+    }
+    .fa-linkedin {
+        font-size: 21px;
+        color: #fff;
+        background-color: #478be7;
+        border-radius: 50%;
+        padding: 9px 10px;
+    }
+    .fa-instagram {
+        font-size: 25px;
+        color: #fff;
+        background-color: #ef5214;
+        border-radius: 50%;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: $md-title;
+        span {
+            font-size: $md-title-span;
+        }
+    }
+
+    h2 {
+        font-size: $md-sub-title;
+    }
+
+    .banner {
+        min-height: auto;
+    }
+
+    .materiais {
+        p {
+            font-size: 15px;
+        }
+    }
+
+    #inbound-cases {
+        .content{
+            padding-top: 0px;
+        }
+    }
 }

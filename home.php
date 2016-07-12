@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <div class="row">
     <div class="col-md-8">
+    home
         <h1>Notícias</h1>
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

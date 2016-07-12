@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-8">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+single
             <h1><?php the_title(); ?></h1>
             <p><em><?php echo ucfirst(get_the_time('l, j \d\e F \d\e Y')); ?></em></p>
             <div class="entry-content">

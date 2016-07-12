@@ -3,3 +3,9 @@ input[type="text"] {
 	margin-right: 15px;
 	min-width: 280px !important;
 }
+
+@media (max-width: 768px) {
+	input[type="text"] {
+		min-width: 95% !important;
+	}
+}

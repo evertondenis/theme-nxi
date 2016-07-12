@@ -1,5 +1,4 @@
 .btn-primary {
-	
 	margin: 20px 0;
 	font-family: $roboto-regular;
 	font-size: 16px;
@@ -43,11 +42,123 @@
 
     	i {
     		margin-left: 20px;
-    		color: $purple;
+    		color: $orange;
     	}
     	span {
     		left: -5px;
-    		color: $purple;
+    		color: $orange;
     	}
+    }
+}
+
+.btn-blue-light {
+    margin: 20px 0;
+    font-family: $roboto-regular;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $blue-light;
+    border-color: $blue-light;
+
+    &:active {
+        @extend .btn-blue-light;
+    }
+    &:focus {
+        @extend .btn-blue-light;
+    }
+    &:visited {
+        @extend .btn-blue-light;
+    }
+
+    span {
+        position: relative;
+        left: 0;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+    }
+    i {
+        margin-left: 10px;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+    }
+
+    &:hover {
+        background-color: $white !important;
+        border-color: $white !important;
+        left: -10px;
+
+        i {
+            margin-left: 20px;
+            color: $orange;
+        }
+        span {
+            left: -5px;
+            color: $orange;
+        }
+    }
+}
+
+.btn-ler-mais {
+    background-color: none !important;
+    border: 0 !important;
+    margin: 20px 0;
+    padding-left: 0;
+    font-family: $roboto-regular;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $orange;
+
+    &:active {
+        @extend .btn-ler-mais;
+    }
+    &:focus {
+        @extend .btn-ler-mais;
+    }
+    &:visited {
+        @extend .btn-ler-mais;
+    }
+
+    span {
+        position: relative;
+        left: 0;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+    }
+
+    &:hover {
+        left: -10px;
+
+        i {
+            color: $purple;
+        }
+        span {
+            left: 10px;
+            color: $purple;
+        }
+    }
+}
+
+.more-link {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .btn-ler-mais {
+        font-size: 14px;
+    }
+    .btn-blue-light {
+        font-size: 14px;
+    }
+    .btn-primary {
+        font-size: 14px;
     }
 }

@@ -1,4 +1,8 @@
 <?php
+/* --------------------- Custom Post Types Load ---------------------- */
+require_once( get_template_directory().'/includes/types/codeless_testimonial_type.php' );
+require_once( get_template_directory().'/includes/types/codeless_portfolio_type.php' );
+
 function scripts_do_template() {
     // Bootstrap core JavaScript
     // wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
