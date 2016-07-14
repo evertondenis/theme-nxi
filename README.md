@@ -1,10 +1,12 @@
 # theme-nxi
 Theme Wordpress
 
-Stack usada:
-
-WordPress
-SASS (sintaxe haml)
-jQuery
-Gulp
-MySQL
+<strong>Stack usada:</strong>
+<br>
+<ul>
+	<li>WordPress</li>
+	<li>SASS</li>
+	<li>jQuery</li>
+	<li>Gulp</li>
+	<li>MySQL</li>
+</ul>
