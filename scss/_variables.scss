@@ -1,7 +1,8 @@
 $padding-section: 70px;
+$spacing: 45px;
 $padding-col-case: 120px;
-$title: 70px;
-$title-span: 50px;
+$title: 60px;
+$title-span: 40px;
 $sub-title: 26px;
 
 $md-title: 30px;
@@ -13,9 +14,23 @@ $sm-title-span: 14px;
 $sm-sub-title: 12px;
 
 ////
+// Btn hamburger
+////
+$button-color: #FB3B0E;					// Button color default
+$button-color-active: #3D2C3F;			// Button color active
+$button-width: 40px;                    // The width of the button area
+$button-height: 40px;                   // The height of the button area
+$bar-thickness: 2px;                    // The thickness of the button bars
+$bar-top: 19px;		                    // The thickness of the button bars
+$button-pad: 5px;                      // The left/right padding between button area and bars.
+$button-bar-space: 1px;                // The spacing between button bars
+$button-transistion-duration: 0.3s;     // The transition duration
+
+////
 // Fonts
 ////
 $roboto-regular: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
+$roboto-medium: roboto-medium, arial, helvetica, verdana, tahoma, sans-serif;
 $roboto-bold: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
 $roboto-light: roboto-light, arial, helvetica, verdana, tahoma, sans-serif;
 $roboto-italic: roboto-italic, arial, helvetica, verdana, tahoma, sans-serif;
@@ -29,8 +44,10 @@ $purple: #6653C7;
 $blue-light: #0ED6F4;
 $gray: #3A3C44;
 $gray-light: #44444B;
+$gray-x-light: #C5C5C5;
 $orange: #FB3B0E;
 $orange-hover: #F89406;
+$nub: #40184A;
 
 ////
 // Backgrounds Colors

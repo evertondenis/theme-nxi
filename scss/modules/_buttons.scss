@@ -1,5 +1,5 @@
 .btn-primary {
-	margin: 20px 0;
+	margin: $spacing 0 20px 0;
 	font-family: $roboto-regular;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -149,6 +149,97 @@
 
 .more-link {
     display: none;
+}
+
+.c-hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: $button-width;
+    height: $button-height;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background $button-transistion-duration;
+
+    span {
+        display: block;
+        position: absolute;
+        top: $bar-top;
+        left: $button-pad;
+        right: $button-pad;
+        height: $bar-thickness;
+        background: white;
+
+        &::before {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: $bar-thickness;
+            background-color: #fff;
+            content: "";
+            top: -10px;
+        }
+        &::after {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: $bar-thickness;
+            background-color: #fff;
+            content: "";
+            bottom: -10px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.c-hamburger--htx {
+    background-color: $button-color;
+
+    span {
+        transition: background 0s $button-transistion-duration;
+
+        &::before {
+            transition-duration: $button-transistion-duration, $button-transistion-duration;
+            transition-delay: $button-transistion-duration, 0s;
+            transition-property: top, transform;
+        }
+        &::after {
+            transition-duration: $button-transistion-duration, $button-transistion-duration;
+            transition-delay: $button-transistion-duration, 0s;
+            transition-property: bottom, transform;
+        }
+    }
+
+    &.is-active {
+        background-color: $button-color-active;
+
+        span {
+            background: none;
+
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+                transition-delay: 0s, $button-transistion-duration;
+            }
+            &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+                transition-delay: 0s, $button-transistion-duration;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {

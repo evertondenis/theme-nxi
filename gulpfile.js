@@ -13,11 +13,11 @@ gulp.task('clean', function() {
 
 gulp.task('sass', function() {
 	return gulp.src('scss/**/*.scss')
-		.pipe(sourcemaps.init())
 	    .pipe(sass().on('error', sass.logError))
 	    .pipe(sass({outputStyle: 'extended'}))
-	    .pipe(sourcemaps.write())
+	    .pipe(sourcemaps.init())
 	    .pipe(rename('nextidea.css'))
+	    .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: 'assets/css'}))
 	    .pipe(gulp.dest('assets/css'));
 });
 

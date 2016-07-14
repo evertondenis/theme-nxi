@@ -7,6 +7,7 @@ h1 {
     font-size: $title;
     line-height: 90%;
     font-family: $roboto-regular;
+    margin-bottom: $spacing;
     span {
         font-size: $title-span;
         font-family: $roboto-regular;
@@ -30,6 +31,19 @@ h2 {
     }
 }
 
+ul {
+    padding-top: 35px;
+    float: right;
+    li {
+        display: inline;
+        list-style: none;
+        margin: 0 5px;
+    }
+    li:last-child {
+        margin-right: 0px;
+    }
+}
+
 .row {
     margin: 0px !important;
 }
@@ -49,6 +63,11 @@ h2 {
 	    background-position: left center;
 	    display: inline-block;
 	    background-size: contain;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
     }
 }
 
@@ -177,67 +196,28 @@ h2 {
         font-family: $roboto-light;
         text-transform: uppercase;
     }
+
+    .btn-primary { margin-top: 20px }
 }
 
 .img-circle { max-width: 190px;}
 
 footer {
-    background: $white url(../../images/title-contato.png) center 200px no-repeat;
-    padding: $padding-section 0;
-
-    .logo-footer {
-        width: 131px;
-    }
+    background: $white url(../../images/title-contato.png) center 210px no-repeat;
+    padding: 55px 0;
 
     ul {
-        margin-top: 35px;
-        li {
-            display: inline;
-            list-style: none;
-            margin: 0 5px;
-        }
-        li:last-child {
-            margin-right: 0px;
-        }
+        width: auto;
     }
 
-    .fa {
-        font-size: 15px;
+    li {
+        text-align: center;
+        float: left;
     }
-    .fa-facebook {
-        font-size: 21px;
-        color: #fff;
-        background-color: #5c61c4;
-        border-radius: 50%;
-        padding: 9px 13px;
-    }
-    .fa-twitter {
-        font-size: 22px;
-        color: #fff;
-        background-color: #28a1e7;
-        border-radius: 50%;
-        padding: 8px 9px;
-    }
-    .fa-google-plus {
-        font-size: 19px;
-        color: #fff;
-        background-color: #f60c38;
-        border-radius: 50%;
-        padding: 10px 7px;
-    }
-    .fa-linkedin {
-        font-size: 21px;
-        color: #fff;
-        background-color: #478be7;
-        border-radius: 50%;
-        padding: 9px 10px;
-    }
-    .fa-instagram {
-        font-size: 25px;
-        color: #fff;
-        background-color: #ef5214;
-        border-radius: 50%;
-        padding: 6px 8px;
+
+    .col-md-8 {
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 
