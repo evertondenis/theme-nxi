@@ -9,6 +9,7 @@ function scripts_do_template() {
     // wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
     wp_register_script('bootstrap', get_template_directory_uri().'/assets/lib/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
     wp_register_script('headroom', get_template_directory_uri().'/assets/js/headroom.js', array(), '', true );
+    wp_register_script('slide', get_template_directory_uri().'/assets/js/jquery.slides.js', array(), '', true );
     wp_register_script('scripts', get_template_directory_uri().'/assets/js/scripts.js#asyncload', array(), '', true );
     
     // css template
@@ -18,6 +19,7 @@ function scripts_do_template() {
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('headroom');
+    wp_enqueue_script('slide');
     wp_enqueue_script('scripts');
 }
 

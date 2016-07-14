@@ -1,6 +1,7 @@
 var nextidea = (function() {
 	function init(){
 		menu();
+		depoimentos();
 		headRoom()
 		showMenu();
 	}
@@ -13,6 +14,35 @@ var nextidea = (function() {
 			jQuery(this).find('.dropdown-toggle').attr("aria-expanded","false");
 			jQuery(this).find(' > .dropdown-menu').stop(true, true).delay(50).fadeOut();
 		});
+	}
+
+	function depoimentos() {
+		jQuery('#slides').slidesjs({
+	        width: 1190,
+	        height: 520,
+	        play: {
+	          active: false,
+	          effect: "fade",
+	          auto: true,
+	          interval: 5000,
+	          swap: false,
+	          pauseOnHover: true,
+	          restartDelay: 2500
+	        },
+	        pagination: {
+	          active: true,
+	          effect: "fade"
+	        },
+	        navigation: {
+	          active: true
+	        },
+	        effect: {
+	          fade: {
+	            speed: 800,
+	            crossfade: true
+	          }
+	        }
+	    });
 	}
 
 	function headRoom() {
