@@ -5,7 +5,7 @@ Theme Wordpress
 <br>
 <ul>
 	<li>WordPress</li>
-	<li>SASS</li>
+	<li>SASS(sintaxe scss)</li>
 	<li>jQuery</li>
 	<li>Gulp</li>
 	<li>MySQL</li>
