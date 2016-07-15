@@ -45,6 +45,9 @@ ul li:last-child {
 .row {
   margin: 0px !important; }
 
+.single-page {
+  padding-top: 105px; }
+
 .logo {
   position: absolute;
   top: 50%;
@@ -145,6 +148,10 @@ ul li:last-child {
   color: #6653C7;
   font-family: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif; }
 
+.depoimentos .container {
+  margin-top: 100px;
+  height: 260px; }
+
 .certificados {
   background-color: #F3F5FB;
   padding: 70px 0; }
@@ -183,6 +190,138 @@ ul li:last-child {
 
 .img-circle {
   max-width: 190px; }
+
+.btns, a.slidesjs-next, a.slidesjs-previous, a.slidesjs-play, a.slidesjs-stop {
+  background-image: url(../../images/btns-next-prev.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  text-indent: -9999px;
+  float: left;
+  margin-right: 5px; }
+
+.slidesjs-container {
+  height: 260px !important; }
+
+.slidesjs-control {
+  height: 280px !important; }
+
+a.slidesjs-next {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  margin-right: 10px;
+  background-position: -52px 0; }
+
+a.slidesjs-next:hover {
+  background-position: -52px -52px; }
+
+a.slidesjs-previous {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  background-position: 0 0; }
+
+a.slidesjs-previous:hover {
+  background-position: 0 -52px; }
+
+a.slidesjs-play {
+  width: 15px;
+  background-position: -25px 0; }
+
+a.slidesjs-play:hover {
+  background-position: -25px -18px; }
+
+a.slidesjs-stop {
+  width: 18px;
+  background-position: -41px 0; }
+
+a.slidesjs-stop:hover {
+  background-position: -41px -18px; }
+
+.slidesjs-pagination {
+  padding: 0;
+  float: none;
+  margin: 0 auto;
+  left: 50%;
+  position: relative;
+  width: auto; }
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px; }
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(../../images/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden; }
+
+.slidesjs-pagination li a.active {
+  background-position: 0 -13px; }
+
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px; }
+
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px; }
+
+.col-50 {
+  width: 50%;
+  float: left; }
+
+.col-50 img {
+  float: right;
+  margin-right: 35px; }
+
+.col-40 {
+  width: 40%;
+  float: left;
+  padding-top: 37px; }
+
+.col-40 figure {
+  position: absolute; }
+
+.img-quotes {
+  position: relative;
+  top: -10px;
+  left: -60px; }
+
+#slides {
+  position: relative;
+  display: none;
+  height: 280px; }
+
+#slides .slidesjs-navigation {
+  margin-top: 5px; }
+
+#slides a {
+  font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
+  font-size: 18px;
+  color: #6653C7; }
+
+#slides a:link {
+  color: #6653C7; }
+
+#slides a:visited {
+  color: #6653C7; }
+
+#slides a:hover {
+  color: #6653C7;
+  text-decoration: underline; }
+
+#slides a:active {
+  color: #6653C7;
+  text-decoration: underline; }
+
+.navbar {
+  overflow: hidden; }
 
 footer {
   background: #FFF url(../../images/title-contato.png) center 210px no-repeat;

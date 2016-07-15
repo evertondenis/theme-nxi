@@ -4,11 +4,10 @@ require_once( get_template_directory().'/includes/types/testimonial_type.php' );
 require_once( get_template_directory().'/includes/types/portfolio_type.php' );
 require_once( get_template_directory().'/includes/types/cases_type.php' );
 require_once( get_template_directory().'/includes/types/destaques_type.php' );
+
 require_once('wp_bootstrap_navwalker.php');
 
 function scripts_do_template() {
-    // Bootstrap core JavaScript
-    // wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
     wp_register_script('bootstrap', get_template_directory_uri().'/assets/lib/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
     wp_register_script('headroom', get_template_directory_uri().'/assets/js/headroom.js', array(), '', true );
     wp_register_script('slide', get_template_directory_uri().'/assets/js/jquery.slides.js', array(), '', true );

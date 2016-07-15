@@ -4,6 +4,9 @@ var nextidea = (function() {
 		depoimentos();
 		headRoom()
 		showMenu();
+
+		var s = jQuery(document).scrollTop();
+		if(s > 0) jQuery('.header').addClass("slideDown");
 	}
 
 	function menu() {
@@ -18,8 +21,8 @@ var nextidea = (function() {
 
 	function depoimentos() {
 		jQuery('#slides').slidesjs({
-	        width: 1190,
-	        height: 520,
+	        width: 800,
+	        height: 280,
 	        play: {
 	          active: false,
 	          effect: "fade",
@@ -37,8 +40,8 @@ var nextidea = (function() {
 	          active: true
 	        },
 	        effect: {
-	          fade: {
-	            speed: 800,
+	          slide: {
+	            fade: 2000,
 	            crossfade: true
 	          }
 	        }

@@ -48,6 +48,10 @@ ul {
     margin: 0px !important;
 }
 
+.single-page {
+    padding-top: 105px;
+}
+
 .logo {
 	position: absolute;
     top: 50%;
@@ -161,6 +165,11 @@ ul {
         color: $purple;
         font-family: $roboto-regular;
     }
+
+    .container {
+        margin-top: 100px;
+        height: 260px;
+    }
 }
 
 .certificados {
@@ -201,6 +210,167 @@ ul {
 }
 
 .img-circle { max-width: 190px;}
+
+.btns {
+    background-image: url(../../images/btns-next-prev.png);
+    background-repeat: no-repeat;
+    display:block;
+    width:50px;
+    height:50px;
+    overflow: hidden;
+    text-indent: -9999px;
+    float: left;
+    margin-right:5px;
+}
+
+.slidesjs-container {
+    height: 260px !important;
+}
+
+.slidesjs-control {
+    height: 280px !important;
+}
+
+a {
+    &.slidesjs-next {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        @extend .btns;
+        margin-right:10px;
+        background-position: -52px 0;
+
+        &:hover {
+            background-position: -52px -52px;
+        }
+    }
+    &.slidesjs-previous {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        @extend .btns;
+        background-position: 0 0;
+
+        &:hover {
+            background-position: 0 -52px;
+        }
+    }
+    &.slidesjs-play {
+        @extend .btns;
+        width:15px;
+        background-position: -25px 0;
+
+        &:hover {
+            background-position: -25px -18px;
+        }
+    }
+    &.slidesjs-stop {
+        @extend .btns;
+        width:18px;
+        background-position: -41px 0;
+
+        &:hover {
+            background-position: -41px -18px;
+        }
+    }
+}
+
+.slidesjs-pagination {
+    padding: 0;
+    float: none;
+    margin: 0 auto;
+    left: 50%;
+    position: relative;
+    width: auto;
+
+    li {
+        float: left;
+        margin: 0 1px;
+
+        a {
+            display: block;
+            width: 13px;
+            height: 0;
+            padding-top: 13px;
+            background-image: url(../../images/pagination.png);
+            background-position: 0 0;
+            float: left;
+            overflow: hidden;
+
+            &.active {
+                background-position: 0 -13px;
+            }
+            &:hover{
+                background-position: 0 -26px;
+
+                &.active {
+                    background-position: 0 -13px;
+                }
+            }
+        }
+    }
+}
+
+.col-50 {
+    width: 50%;
+    float: left;
+
+    img {
+        float: right;
+        margin-right: 35px;
+    }
+}
+
+.col-40 {
+    width: 40%;
+    float: left;
+    padding-top: 37px;
+
+    figure {
+        position: absolute;
+    }
+}
+
+.img-quotes {
+    position: relative;
+    top: -10px;
+    left: -60px;
+}
+
+#slides {
+    position: relative;
+    display: none;
+    height: 280px;
+
+    .slidesjs-navigation {
+        margin-top:5px;
+    }
+
+    a {
+        font-family: $roboto-bold;
+        font-size: 18px;
+        color: $purple;
+
+        &:link {
+            color: $purple;
+        }
+        &:visited {
+            color: $purple;
+        }
+        &:hover {
+            color: $purple;
+            text-decoration: underline;
+        }
+        &:active {
+            color: $purple;
+            text-decoration: underline;
+        }
+    }
+}
+
+.navbar {
+    overflow: hidden
+}
 
 footer {
     background: $white url(../../images/title-contato.png) center 210px no-repeat;

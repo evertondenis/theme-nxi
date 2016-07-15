@@ -32,42 +32,6 @@ endwhile;
 wp_reset_query();
 ?>
 
-<?php
-// global $post;
-// $args = array( 
-// 		'posts_per_page' => 1,
-// 		'category_name' => 'destaque',
-// 		'orderby' => rand
-// 		);
-// $bannersPost = get_posts( $args );
-
-// foreach( $bannersPost as $post ) : setup_postdata($post); 
-// 	if (has_post_thumbnail( $post->ID ) ):
-// 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-// 	endif;
-?>
-<!-- <section class="banner" style="background:transparent url(<?php echo $image[0]; ?>) center no-repeat;">
-	<div class="container">
-		
-		<div class="col-md-6">
-			<h1><?php the_title(); ?></h1>
-			<p><?php the_content(); ?></p>
-		</div>
-		
-	</div>
-</section> -->
-<?php //endforeach; ?>
-
-<!-- <section class="banner">
-	<div class="container">
-		<div class="col-md-6">
-			<h1>Aumente os seus resultados</h1>
-			<p>E-mails diários abordando conceito e inovações que farão o seu negócio avançar utilizando o inbound marketing.</p>
-			<p><a class="btn btn-primary btn-lg" href="#"><span>Learn more</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
-		</div>
-	</div>
-</section>
- -->
 <section class="inbound">
 	<div class="container">
 		<?php
@@ -187,111 +151,6 @@ wp_reset_query();
 	</div>
 </section>
 
-<style>
-    #slides {
-      display: none
-    }
-
-    #slides .slidesjs-navigation {
-      margin-top:5px;
-    }
-
-    a.slidesjs-next,
-    a.slidesjs-previous,
-    a.slidesjs-play,
-    a.slidesjs-stop {
-      background-image: url(imgs/btns-next-prev.png);
-      background-repeat: no-repeat;
-      display:block;
-      width:12px;
-      height:18px;
-      overflow: hidden;
-      text-indent: -9999px;
-      float: left;
-      margin-right:5px;
-    }
-
-    a.slidesjs-next {
-      margin-right:10px;
-      background-position: -12px 0;
-    }
-
-    a:hover.slidesjs-next {
-      background-position: -12px -18px;
-    }
-
-    a.slidesjs-previous {
-      background-position: 0 0;
-    }
-
-    a:hover.slidesjs-previous {
-      background-position: 0 -18px;
-    }
-
-    a.slidesjs-play {
-      width:15px;
-      background-position: -25px 0;
-    }
-
-    a:hover.slidesjs-play {
-      background-position: -25px -18px;
-    }
-
-    a.slidesjs-stop {
-      width:18px;
-      background-position: -41px 0;
-    }
-
-    a:hover.slidesjs-stop {
-      background-position: -41px -18px;
-    }
-
-    .slidesjs-pagination {
-      margin: 7px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(imgs/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    #slides a:link,
-    #slides a:visited {
-      color: #333
-    }
-
-    #slides a:hover,
-    #slides a:active {
-      color: #9e2020
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-  </style>
-
 <section class="depoimentos">
 	<div class="container">
 		<div id="slides">
@@ -309,15 +168,22 @@ wp_reset_query();
 			if( $testimonial_query->have_posts() ) :
 			  while ($testimonial_query->have_posts()) : $testimonial_query->the_post(); ?>
 
-			  	<div>
-				  	<?php if (has_post_thumbnail( $post->ID ) ): ?>
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-						<figure>
-							<img class="img-responsive img-circle" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+			  	<div class="row">
+			  		<div class="col-50">
+			  			<?php if (has_post_thumbnail( $post->ID ) ): ?>
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+							<figure>
+								<img class="img-responsive img-circle" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+							</figure>
+						<?php endif; ?>	
+			  		</div>
+			  		<div class="col-40">
+			  			<figure>
+							<img class="img-quotes" src="<?php bloginfo('template_url');?>/images/quatations.png" alt="">								
 						</figure>
-					<?php endif; ?>
-				    
-				    <p><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+			  			<?php the_content(); ?>
+				    	<p><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+			  		</div>
 			    </div>
 			    <?php
 			  endwhile;
