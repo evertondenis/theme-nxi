@@ -2,19 +2,51 @@
 
 <?php
 global $post;
-$args = array( 
+$args = array(
 		'posts_per_page' => 1,
-		'category_name' => 'banner',
+		'post_type' => 'destaque',
+		'post_status' => 'publish',
 		'orderby' => rand
 		);
-$bannersPost = get_posts( $args );
+$destaques_query = null;
+$destaques_query = new WP_Query($args);
 
-foreach( $bannersPost as $post ) : setup_postdata($post); 
-	if (has_post_thumbnail( $post->ID ) ):
+if( $destaques_query->have_posts() ) {
+while ($destaques_query->have_posts()) : $destaques_query->the_post(); 
+  	if (has_post_thumbnail( $post->ID ) ):
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-	endif;
-?>
+	endif; ?>
 <section class="banner" style="background:transparent url(<?php echo $image[0]; ?>) center no-repeat;">
+	<div class="container">		
+		<div class="col-md-6">
+			<h1><?php the_title(); ?></h1>
+			<p><?php the_content(); ?></p>
+			<p><a class="btn btn-primary btn-lg" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><span>Texto do Botão</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+		</div>
+		
+	</div>
+</section>
+<?php
+endwhile;
+}
+wp_reset_query();
+?>
+
+<?php
+// global $post;
+// $args = array( 
+// 		'posts_per_page' => 1,
+// 		'category_name' => 'destaque',
+// 		'orderby' => rand
+// 		);
+// $bannersPost = get_posts( $args );
+
+// foreach( $bannersPost as $post ) : setup_postdata($post); 
+// 	if (has_post_thumbnail( $post->ID ) ):
+// 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+// 	endif;
+?>
+<!-- <section class="banner" style="background:transparent url(<?php echo $image[0]; ?>) center no-repeat;">
 	<div class="container">
 		
 		<div class="col-md-6">
@@ -23,8 +55,8 @@ foreach( $bannersPost as $post ) : setup_postdata($post);
 		</div>
 		
 	</div>
-</section>
-<?php endforeach; ?>
+</section> -->
+<?php //endforeach; ?>
 
 <!-- <section class="banner">
 	<div class="container">
@@ -53,7 +85,7 @@ foreach( $bannersPost as $post ) : setup_postdata($post);
 		</div>
 		<div class="col-md-6">
 			<p><?php the_content(); ?></p>
-			<p><a class="btn btn-blue-light btn-lg" href="<?php the_permalink(); ?>"><span>Conheça mais o Inbound</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+			<p><a class="btn btn-blue-light btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span>Conheça mais o Inbound</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 		</div>
 		<?php endforeach; ?>
 	</div>
@@ -80,7 +112,7 @@ foreach( $bannersPost as $post ) : setup_postdata($post);
 						<h1><span>Case de</span><br>Sucesso</h1>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<p><?php the_content(); ?></p>
-						<p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>ver case completo</span></a></p>
+						<p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>ver case completo</span></a></p>
 					</div>
 					<div class="col-md-8">
 						<?php if (has_post_thumbnail( $post->ID ) ): ?>
@@ -95,7 +127,7 @@ foreach( $bannersPost as $post ) : setup_postdata($post);
 				  endwhile;
 				}
 				wp_reset_query();
-				?>		
+				?>
 			</div>
 		</div>
 	</section>

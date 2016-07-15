@@ -3,6 +3,7 @@
 require_once( get_template_directory().'/includes/types/testimonial_type.php' );
 require_once( get_template_directory().'/includes/types/portfolio_type.php' );
 require_once( get_template_directory().'/includes/types/cases_type.php' );
+require_once( get_template_directory().'/includes/types/destaques_type.php' );
 require_once('wp_bootstrap_navwalker.php');
 
 function scripts_do_template() {
