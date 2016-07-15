@@ -4,7 +4,7 @@ add_action('init', 'testimonial_register', 1);
 /* Testimonial Register */
 function testimonial_register() {
 	$labels = array(
-		'name' => _x('Testimonials', 'post type general name', 'codeless'),
+		'name' => _x('Depoimentos', 'post type general name', 'codeless'),
 		'singular_name' => _x('Testimonial Entry', 'post type singular name', 'codeless'),
 		'add_new' => _x('Add New', 'testimonial', 'codeless'),
 		'add_new_item' => __('Add New Testimonial Entry', 'codeless'),
@@ -17,7 +17,7 @@ function testimonial_register() {
 		'parent_item_colon' => ''
 	);
 
-	$slugRule = "testimonial_trusted";
+	$slugRule = "depoimentos";
 
 	$args = array(
 		'labels' => $labels,
@@ -73,4 +73,3 @@ function prod_custom_testimonial_columns($column) {
 		break;
 	}
 }
-?>
