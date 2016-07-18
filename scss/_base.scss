@@ -43,7 +43,6 @@ ul {
         margin-right: 0px;
     }
 }
-
 .row {
     margin: 0px !important;
 }
@@ -122,10 +121,51 @@ ul {
 
 .cases-home {
     padding-bottom: $padding-section;
+    h1 { color: $purple; }
+}
+
+.case-list {
+    height: 610px;
+    overflow: hidden;
+    color: $white;
+
+    h2 {
+        a {
+            color: $white;
+        }
+    }
+
+    img {
+        margin-top: -50px;
+    }
+}
+
+.page-header {
+    min-height: 740px;
+    padding: 130px;
+    margin: 0;
+    border: 0;
+
+    h1 {
+        color: $white;
+        text-align: center;
+    }
+}
+
+.gradient-bg1 {
+    background-image: linear-gradient(to right, #f42041, #efac6b);
+}
+.gradient-bg2 {
+    background-image: linear-gradient(to right, #0ebfd9, #6653c7);
+}
+.gradient-bg3 {
+    background-image: linear-gradient(to right, #0ed9a2, #c78453);
 }
 
 .cta {
     @extend .cases-home;
+
+    h1 { color: $purple; }
 }
 
 .materiais {
@@ -344,6 +384,11 @@ a {
 
     .slidesjs-navigation {
         margin-top:5px;
+    }
+
+    p {
+        font-family: $roboto-regular;
+        font-size: 16px;
     }
 
     a {

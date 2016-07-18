@@ -147,6 +147,29 @@
     }
 }
 
+.case-list {
+    .content {
+        padding-top: 110px;
+    }
+    
+    .btn-ler-mais {
+        @extend .btn-ler-mais;
+        color: $white;
+
+        &:hover {
+            left: -10px;
+
+            i {
+                color: $white !important;
+            }
+            span {
+                left: 10px;
+                color: $white !important;
+            }
+        }
+    }
+}
+
 .more-link {
     display: none;
 }
