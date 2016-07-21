@@ -31,7 +31,7 @@ endif;
                        <?php edit_post_link(); ?>
                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                        <p><?php the_content(); ?></p>
-                       <p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>ver case completo</span></a></p>
+                       <p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i> <span>ver case completo</span></a></p>
                    </div>
                    <div class="col-md-8">
                        <?php if (has_post_thumbnail( $post->ID ) ): ?>

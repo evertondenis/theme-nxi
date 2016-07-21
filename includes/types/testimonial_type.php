@@ -3,6 +3,8 @@ add_action('init', 'testimonial_register', 1);
 
 /* Testimonial Register */
 function testimonial_register() {
+	global $cl_redata;
+
 	$labels = array(
 		'name' => _x('Depoimentos', 'post type general name', 'codeless'),
 		'singular_name' => _x('Testimonial Entry', 'post type singular name', 'codeless'),
@@ -17,7 +19,7 @@ function testimonial_register() {
 		'parent_item_colon' => ''
 	);
 
-	$slugRule = "depoimentos";
+	$slugRule = (isset($cl_redata["depoimentos_slug"]) ? $cl_redata["depoimentos_slug"] : '');
 
 	$args = array(
 		'labels' => $labels,

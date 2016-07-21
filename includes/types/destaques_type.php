@@ -1,7 +1,7 @@
 <?php
 add_action('init', 'destaque_register', 1);
 
-/* Sase Register */
+/* Destaque Register */
 
 function destaque_register() {
 	global $cl_redata;

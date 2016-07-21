@@ -1,7 +1,7 @@
 <?php
 add_action('init', 'case_register', 1);
 
-/* Sase Register */
+/* Cases Register */
 
 function case_register() {
 	global $cl_redata;
@@ -31,7 +31,7 @@ function case_register() {
 		'rewrite' => array('slug'=>$slugRule,'with_front'=>true),
 		'query_var' => true,
 		'show_in_nav_menus'=> false,
-		'supports' => array('title','thumbnail','excerpt','editor','comments')
+		'supports' => array('case-type','title','thumbnail','excerpt','editor','comments')
 		);
 
 	register_post_type( 'case' , $args );
