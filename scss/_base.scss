@@ -335,6 +335,32 @@ ul {
     }
 
     .btn-primary { margin-top: 20px }
+
+    input[type="text"] {
+        padding: 20px 15px;
+        margin-right: 15px;
+        min-width: 280px !important;
+    }
+}
+
+.contato {
+    text-align: center;
+    
+    h2 {
+        font-family: $roboto-light;
+        font-size: 20px;
+        color: $white;
+    }
+}
+
+.form-contact {
+    margin-top: 60px;
+
+    .container {
+        width: 860px;
+    }
+
+    .btn-primary { margin-top: 15px }
 }
 
 .distribute-imgs {

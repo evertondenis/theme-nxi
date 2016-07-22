@@ -302,6 +302,28 @@ ul li:last-child {
 .newsletter .btn-primary {
   margin-top: 20px; }
 
+.newsletter input[type="text"] {
+  padding: 20px 15px;
+  margin-right: 15px;
+  min-width: 280px !important; }
+
+.contato {
+  text-align: center; }
+
+.contato h2 {
+  font-family: roboto-light, arial, helvetica, verdana, tahoma, sans-serif;
+  font-size: 20px;
+  color: #FFF; }
+
+.form-contact {
+  margin-top: 60px; }
+
+.form-contact .container {
+  width: 860px; }
+
+.form-contact .btn-primary {
+  margin-top: 15px; }
+
 .distribute-imgs {
   width: 100%;
   margin-left: auto;
@@ -3334,13 +3356,16 @@ footer .col-md-8 {
   -o-animation-name: slideUp;
   animation-name: slideUp; }
 
-input[type="text"] {
-  padding: 20px 15px;
-  margin-right: 15px;
-  min-width: 280px !important; }
+.form-group input[type="text"] {
+  height: 50px;
+  margin-bottom: 10px; }
 
-@media (max-width: 768px) {
-  input[type="text"] {
-    min-width: 95% !important; } }
+.form-group input[type="email"] {
+  height: 50px;
+  margin-bottom: 10px; }
+
+.form-group select {
+  height: 50px;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=nextidea.css.map */

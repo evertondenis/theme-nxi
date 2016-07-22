@@ -5,10 +5,6 @@ $banner =  $banner[0]['full'];
 ?>
 <div class="single-page" style="background:#6653C7 url(<?php echo $banner ?>) center 0 no-repeat;">
     <div class="container">
-       <!--  <?php if(has_post_thumbnail()) :?>
-            <figure class="tb-featured-image"><?php echo get_the_post_thumbnail( $post_id, 'medium' ); ?></figure>
-        <?php endif;?>
-             -->
         <section>
             
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
