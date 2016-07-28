@@ -43,12 +43,50 @@ ul {
         margin-right: 0px;
     }
 }
+
 .row {
     margin: 0px !important;
 }
 
 .single-page {
     padding-top: 105px;
+
+    p {
+        color: $white;
+    }
+
+    h1 {
+        font-family: $roboto-regular;
+        font-size: 32px;
+        color: $white;
+    }
+
+    h2 {
+        font-family: $roboto-bold;
+        font-size: 18px;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    .content {
+        top: 50%;
+    }
+}
+
+section {
+    &.descricao {
+        h1 {
+            margin-bottom: 20px;
+            font-family: $roboto-regular;
+            font-size: 32px;
+            color: $gray;
+            text-transform: uppercase;
+        }
+
+        article {
+            margin-bottom: 50px;
+        }
+    }
 }
 
 .logo {
@@ -690,4 +728,14 @@ footer {
             padding-top: 0px;
         }
     }
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.clear {
+    clear: both;
 }

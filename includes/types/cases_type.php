@@ -31,7 +31,7 @@ function case_register() {
 		'rewrite' => array('slug'=>$slugRule,'with_front'=>true),
 		'query_var' => true,
 		'show_in_nav_menus'=> false,
-		'supports' => array('case-type','title','thumbnail','excerpt','editor','comments')
+		'supports' => array('case-type','title','thumbnail','excerpt','editor','comments', 'custom-fields')
 		);
 
 	register_post_type( 'case' , $args );

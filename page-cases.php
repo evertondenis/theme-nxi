@@ -15,7 +15,6 @@ endif;
        <?php
        global $post;
        $args = array(
-               'posts_per_page' => 10,
                'post_type' => 'case',
                'post_status' => 'publish',
                'orderby' => rand
@@ -27,13 +26,13 @@ endif;
          while ($case_query->have_posts()) : $case_query->the_post(); ?>
             <article class="gradient-bg<?php echo $count ?>  case-list">
                 <div class="container">
-                    <div class="col-md-4 content">
+                    <div class="col-md-4 content vcenter">
                        <?php edit_post_link(); ?>
                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                       <p><?php the_content(); ?></p>
+                       <p><?php the_excerpt(); ?></p>
                        <p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i> <span>ver case completo</span></a></p>
                    </div>
-                   <div class="col-md-8">
+                   <div class="col-md-7 vcenter">
                        <?php if (has_post_thumbnail( $post->ID ) ): ?>
                            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
                            <figure>

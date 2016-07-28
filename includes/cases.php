@@ -17,7 +17,7 @@
 					<div class="col-md-4 content">
 						<h1><span>Case de</span><br>Sucesso</h1>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<p><?php the_content(); ?></p>
+						<p><?php the_excerpt(); ?></p>
 						<p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>ver case completo</span></a></p>
 					</div>
 					<div class="col-md-8">

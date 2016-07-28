@@ -48,6 +48,33 @@ ul li:last-child {
 .single-page {
   padding-top: 105px; }
 
+.single-page p {
+  color: #FFF; }
+
+.single-page h1 {
+  font-family: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
+  font-size: 32px;
+  color: #FFF; }
+
+.single-page h2 {
+  font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
+  font-size: 18px;
+  color: #FFF;
+  text-transform: uppercase; }
+
+.single-page .content {
+  top: 50%; }
+
+section.descricao h1 {
+  margin-bottom: 20px;
+  font-family: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
+  font-size: 32px;
+  color: #3A3C44;
+  text-transform: uppercase; }
+
+section.descricao article {
+  margin-bottom: 50px; }
+
 .logo {
   position: absolute;
   top: 50%;
@@ -588,6 +615,14 @@ footer .col-md-8 {
     font-size: 15px; }
   #inbound-cases .content {
     padding-top: 0px; } }
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
+.clear {
+  clear: both; }
 
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
