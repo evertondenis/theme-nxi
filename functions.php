@@ -48,6 +48,9 @@ function nxi_theme_support() {
 
 function images_sizes() {
     add_image_size( 'team', 225, 345, true );
+    add_image_size( 'thumb-post', 630, 315, true );
+    add_image_size( 'img-post', 650, 440, true );
+    add_image_size( 'thumb-post-sidebar', 90, 90, true );
 }
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
@@ -64,12 +67,6 @@ function my_custom_sizes($sizes) {
  * FUNCTION BLOG
  * --------------------------------------------------------------
  */
-
-
-
-add_image_size( 'thumb-post', 630, 315, true );
-add_image_size( 'img-post', 650, 440, true );
-add_image_size( 'thumb-post-sidebar', 90, 90, true );
 
 if (function_exists('register_sidebar')) {
     register_sidebar(array(
@@ -126,7 +123,7 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<div class="content"><h3>',
         'after_title' => '</h3>',
         'before_widget' => '<div class="row"><div class="col-md-12">',
-        'after_widget' => '</div></div></div>',
+        'after_widget' => '<div class="clear">&nbsp;</div></div></div></div>',
         ));
 }
 

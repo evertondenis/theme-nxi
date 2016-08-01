@@ -125,6 +125,10 @@
 		text-transform: uppercase;
 	}
 
+	.row {
+		margin-bottom: 25px !important;
+	}
+
 	.col-md-12 { padding: 0; }
 
 	.content {
@@ -146,6 +150,21 @@
         }
 	}
 
+	input[type="email"] {
+		border: 1px solid #CCCED8;
+
+		&:focus {
+            border: 1px solid $purple;
+            outline: none;
+        }
+	}
+
+	ul {
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+
 	li {
         display: block;
         margin-right: 0px;
@@ -154,6 +173,18 @@
         a {
             display: inline;
         }
+    }
+
+    .realty_widget {
+    	margin: 0px;
+    	padding: 10px 0;
+
+		li {
+			display: block;
+		    margin: 0px 0px 15px 0;
+		    padding: 0px 0px 10px;
+		    border-bottom: 1px solid #ccc;
+    	}
     }
 }
 

@@ -727,6 +727,9 @@ footer .col-md-8 {
   color: #4A4177;
   text-transform: uppercase; }
 
+.sidebar .row {
+  margin-bottom: 25px !important; }
+
 .sidebar .col-md-12 {
   padding: 0; }
 
@@ -745,6 +748,18 @@ footer .col-md-8 {
   border: 1px solid #6653C7;
   outline: none; }
 
+.sidebar input[type="email"] {
+  border: 1px solid #CCCED8; }
+
+.sidebar input[type="email"]:focus {
+  border: 1px solid #6653C7;
+  outline: none; }
+
+.sidebar ul {
+  float: none;
+  margin: 0;
+  padding: 0; }
+
 .sidebar li {
   display: block;
   margin-right: 0px;
@@ -752,6 +767,16 @@ footer .col-md-8 {
 
 .sidebar li a {
   display: inline; }
+
+.sidebar .realty_widget {
+  margin: 0px;
+  padding: 10px 0; }
+
+.sidebar .realty_widget li {
+  display: block;
+  margin: 0px 0px 15px 0;
+  padding: 0px 0px 10px;
+  border-bottom: 1px solid #ccc; }
 
 .border-radius-top {
   border-radius: 5px 5px 0 0; }
