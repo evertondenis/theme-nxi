@@ -51,7 +51,7 @@ var nextidea = (function() {
 	function headRoom() {
 		var myElement = document.querySelector("header");
 		var headroom  = new Headroom(myElement, {
-										"offset": 205,
+										"offset": 20,
 										"tolerance": 5,
 										"classes": {
 											"initial": "animated",

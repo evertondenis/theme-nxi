@@ -7,10 +7,36 @@
 		margin-top: 30px;
 		margin-bottom: 30px;
 	}
+	a {
+		font-family: $roboto-regular;
+		color: $orange;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:visited {
+			font-family: $roboto-regular;
+			color: $orange;
+			text-decoration: none;
+		}
+	}
+
+	hr {
+		margin: 0;
+	    height: 3px;
+	    background-color: #000;
+	    width: 10%;
+	}
 
 	h1 {
 		margin: 25px 0;
-		font-size: 22px;
+		font-size: 32px;
+		font-family: $roboto-bold;
+		color: $purple;
+		text-decoration: none;
+		line-height: 100%;
 
 		a {
 			font-family: $roboto-bold;
@@ -20,6 +46,13 @@
 
 			&:hover {
 				text-decoration: underline;
+			}
+
+			&:visited {
+				font-family: $roboto-bold;
+				font-size: 22px;
+				color: $purple;
+				text-decoration: none;
 			}
 		}
 	}
@@ -114,6 +147,53 @@
 				text-decoration: underline;
 			}
 		}
+	}
+
+	.crumbs {
+		font-family: $roboto-regular;
+		color: $purple;
+		font-size: 14px;
+		text-transform: uppercase;
+
+		hr {
+			margin: 0;
+		    height: 7px;
+		    background-color: $purple;
+		    width: 5%;
+		}
+
+		ul {
+			float: none;
+			margin: 40px 0 20px;
+			padding: 0;
+
+			li {
+				margin: 0 5px 0 0;
+
+				a {
+					font-family: $roboto-bold;
+					color: $purple;
+					font-size: 14px;
+					text-transform: uppercase;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					&:visited {
+						font-family: $roboto-bold;
+						color: $purple;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.btn-purple {
+		text-decoration: none;
+		&:visited { color: $white; text-decoration: none }
 	}
 }
 

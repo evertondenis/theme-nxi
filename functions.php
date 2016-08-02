@@ -298,7 +298,17 @@ function the_breadcrumb() {
             echo '<li>/</li>';
             echo '<li>';
             the_category(' </li><li> ');
+            if (is_single()) {
+             echo "</li><li>/</li><li>";
+             the_title();
+             echo '</li>';
+            }
         }
+        // } elseif (is_page()) {
+        //  echo '<li>';
+        //  echo the_title();
+        //  echo '</li>';
+        // }
     }
     elseif (is_tag()) {single_tag_title();}
     elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}

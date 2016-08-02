@@ -630,9 +630,32 @@ footer .col-md-8 {
   margin-top: 30px;
   margin-bottom: 30px; }
 
+.blog-archive a {
+  font-family: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
+  color: #FB3B0E;
+  text-decoration: underline; }
+
+.blog-archive a:hover {
+  text-decoration: none; }
+
+.blog-archive a:visited {
+  font-family: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
+  color: #FB3B0E;
+  text-decoration: none; }
+
+.blog-archive hr {
+  margin: 0;
+  height: 3px;
+  background-color: #000;
+  width: 10%; }
+
 .blog-archive h1 {
   margin: 25px 0;
-  font-size: 22px; }
+  font-size: 32px;
+  font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
+  color: #6653C7;
+  text-decoration: none;
+  line-height: 100%; }
 
 .blog-archive h1 a {
   font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
@@ -642,6 +665,12 @@ footer .col-md-8 {
 
 .blog-archive h1 a:hover {
   text-decoration: underline; }
+
+.blog-archive h1 a:visited {
+  font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
+  font-size: 22px;
+  color: #6653C7;
+  text-decoration: none; }
 
 .blog-archive form label {
   display: none; }
@@ -720,6 +749,48 @@ footer .col-md-8 {
 
 .blog-archive .title-categoria a:hover {
   text-decoration: underline; }
+
+.blog-archive .crumbs {
+  font-family: roboto-regular, arial, helvetica, verdana, tahoma, sans-serif;
+  color: #6653C7;
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.blog-archive .crumbs hr {
+  margin: 0;
+  height: 7px;
+  background-color: #6653C7;
+  width: 5%; }
+
+.blog-archive .crumbs ul {
+  float: none;
+  margin: 40px 0 20px;
+  padding: 0; }
+
+.blog-archive .crumbs ul li {
+  margin: 0 5px 0 0; }
+
+.blog-archive .crumbs ul li a {
+  font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
+  color: #6653C7;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.blog-archive .crumbs ul li a:hover {
+  text-decoration: underline; }
+
+.blog-archive .crumbs ul li a:visited {
+  font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
+  color: #6653C7;
+  text-decoration: none; }
+
+.blog-archive .btn-purple {
+  text-decoration: none; }
+
+.blog-archive .btn-purple:visited {
+  color: #FFF;
+  text-decoration: none; }
 
 .sidebar h3 {
   font-family: roboto-bold, arial, helvetica, verdana, tahoma, sans-serif;
