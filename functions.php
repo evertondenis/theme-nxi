@@ -387,11 +387,12 @@ class Realty_Widget extends WP_Widget{
             echo '<ul class="realty_widget">';
             while ($listings->have_posts()) {
                 $listings->the_post();
-                $image = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, 'realty_widget_size') : '<div class="noThumb"></div>';
-                $listItem = '<li><a href="' . get_permalink() . '" title="' . get_the_title() . '">' . $image . '</a>';
+                $image = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, 'thumb-post-sidebar') : '<div class="noThumb"></div>';
+                $listItem = '<li><a href="' . get_permalink() . '" class="img-thumb" title="' . get_the_title() . '">' . $image . '</a>';
                 $listItem .= '<a href="' . get_permalink() . '">';
                 $listItem .= get_the_title() . '</a>';
-                $listItem .= '<span>' . get_the_date() . '</span></li>';
+                // $listItem .= '<span>' . get_the_date() . '</span></li>';
+                $listItem .= '<time datetime=\"' . get_the_time('Y-m-d g:i') . '\">' . get_the_time('j') . ' ' . get_the_time('F') . ' ' . get_the_time('Y') . '</time>';
                 echo $listItem;
             }
             echo '</ul>';

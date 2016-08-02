@@ -17,12 +17,24 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     <?php wp_head(); ?>
+        <script src="https://apis.google.com/js/platform.js" async defer>
+          {lang: 'pt-BR'}
+        </script>
     </head>
 
     <body>
+
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.7&appId=110610719032038";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
         <header class="header header-blog header--fixed hide-from-print">
             <div class="container">
-                <h1 class="logo"><a href="<?php bloginfo('url');?>" title="<?php bloginfo('description');?>"><?php bloginfo('name');?></a></h1>
+                <h1 class="logo"><a href="<?php bloginfo('url');?>/blog" title="<?php bloginfo('description');?>"><?php bloginfo('name');?></a></h1>
                 <nav class="menu-menu-principal-container">
                     <?php wp_nav_menu( array( 'menu' => 'topo', 'depth' => 2, 'container' => false, 'menu_class' => 'menu', 'walker' => new wp_bootstrap_navwalker()));?>
                     <button class="c-hamburger c-hamburger--htx">
