@@ -877,6 +877,41 @@ footer .col-md-8 {
     float: left;
     width: 305px; } }
 
+.pagination .current {
+  background-color: #4A4177;
+  padding: 13px 20px 15px;
+  color: #FFF; }
+
+.pagination a {
+  font-family: roboto-medium, arial, helvetica, verdana, tahoma, sans-serif;
+  font-size: 16px;
+  background-color: #FFF;
+  padding: 14px 20px 16px;
+  text-decoration: none;
+  color: #4A4177; }
+
+.pagination a:hover {
+  background-color: #4A4177;
+  color: #FFF; }
+
+.pagination a:visited {
+  background-color: #FFF;
+  text-decoration: none;
+  color: #4A4177; }
+
+.pagination a:visited:hover {
+  background-color: #4A4177;
+  color: #FFF; }
+
+.pagination .btn-prev {
+  text-transform: uppercase; }
+
+.pagination .btn-next {
+  text-transform: uppercase; }
+
+.pagination .btn-next i {
+  padding-right: 20px; }
+
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #3A3C44; }

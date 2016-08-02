@@ -266,7 +266,7 @@ function pagination($pages = '') {
 
     if(1 != $pages) {
         // echo "<span>Page ".$paged." of ".$pages."</span>";
-        if($paged > 1) echo "<a href='".get_pagenum_link($paged - 1)."' class=\"btn btn-primary btn-lg\"><i class=\"fa fa-chevron-left pagination-icon-r\" aria-hidden=\"true\"></i> Anterior";
+        if($paged > 1) echo "<a href='".get_pagenum_link($paged - 1)."' class=\"btn-prev\"><i class=\"fa fa-long-arrow-left pagination-icon-r\" aria-hidden=\"true\"></i> Prev";
 
         for ($i=1; $i <= $pages; $i++) {
             if (1 != $pages) {
@@ -274,7 +274,7 @@ function pagination($pages = '') {
             }
         }
 
-        if ($paged < $pages ) echo "<a href=\"".get_pagenum_link($paged + 1)."\" class=\"btn-primary btn-lg\">Próximo <i class=\"fa fa-chevron-right pagination-icon-l\" aria-hidden=\"true\"></i></a>";
+        if ($paged < $pages ) echo "<a href=\"".get_pagenum_link($paged + 1)."\" class=\"btn-next\">Next <i class=\"fa fa-long-arrow-right pagination-icon-l\" aria-hidden=\"true\"></i></a>";
     }
 }
 
