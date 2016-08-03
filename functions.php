@@ -58,7 +58,7 @@ add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 function my_custom_sizes($sizes) {
     return array_merge($sizes, array(
         'team' => __('Team Image'),
-    ));
+        ));
 }
 
 
@@ -299,25 +299,72 @@ function the_breadcrumb() {
             echo '<li>';
             the_category(' </li><li> ');
             if (is_single()) {
-             echo "</li><li>/</li><li>";
-             the_title();
-             echo '</li>';
-            }
-        }
+               echo "</li><li>/</li><li>";
+               the_title();
+               echo '</li>';
+           }
+       }
         // } elseif (is_page()) {
         //  echo '<li>';
         //  echo the_title();
         //  echo '</li>';
         // }
-    }
-    elseif (is_tag()) {single_tag_title();}
-    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
-    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
-    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
-    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
-    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
-    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
-    echo '</ul>';
+   }
+   elseif (is_tag()) {single_tag_title();}
+   elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+   elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+   elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+   elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+   elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+   elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+   echo '</ul>';
+}
+
+/**
+ * --------------------------------------------------------------
+ * CUSTOM COMMENTS  
+ * --------------------------------------------------------------
+ */
+
+function custom_comments( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+    switch( $comment->comment_type ) :
+    case 'pingback' :
+    case 'trackback' : ?>
+        <li <?php comment_class(); ?> id="comment<?php comment_ID(); ?>">
+        <div class="back-link">< ?php comment_author_link(); ?></div>
+    <?php break;
+    default : ?>
+        
+            <article <?php comment_class(); ?> class="comment">
+                <div class="comment-body">
+                    <figure><?php echo get_avatar( $comment, 50 ); ?></figure>
+                    <span class="author-name"><?php comment_author(); ?></span>
+                    <time <?php comment_time( 'c' ); ?> class="comment-time">
+                        <span class="date">
+                            <?php comment_date(); ?>
+                        </span>
+                        <span class="time">
+                            <?php comment_time(); ?>
+                        </span>
+                    </time>
+                    <div class="comentario"><?php comment_text(); ?></div>
+                </div><!-- comment-body -->
+                <footer class="comment-footer">
+                    <div class="reply"><?php 
+                        comment_reply_link( array_merge( $args, array( 
+                            'reply_text' => 'Resposta',
+                            'after' => ' <span></span>', 
+                            'depth' => $depth,
+                            'max_depth' => $args['max_depth'] 
+                            ) ) ); ?>
+                    </div><!-- .reply -->
+                </footer><!-- .comment-footer -->
+                <div class="clear">&nbsp;</div>
+            </article><!-- #comment-<?php comment_ID(); ?> -->
+        <?php // End the default styling of comment
+    break;
+    endswitch;
 }
 
 /**

@@ -22,6 +22,7 @@
 			.saboxplugin-socials {
 				background-color: $white;
 				border-radius: 5px;
+				z-index: 0;
 			}
 
 			.escrito-por {
@@ -136,26 +137,26 @@
 
 	.chamada-news {
 		padding-right: 50px; 
-		width: 550px;
+		width: 100%;
 		float: left;
 		color: #fff;
 
 		h1 {
 			font-family: $roboto-bold;
-			font-size: 67px;
+			font-size: 30px;
 			color: #fff;
 		}
 	}
 
 	.form-news {
-		width: 400px;
+		width: 100%;
 		float: left;
 		font-family: $roboto-light;
-		font-size: 20px;
+		font-size: 12px;
 	}
 
 	.conteudo {
-		padding: 0 25px;
+		padding: 0 25px 30px;
 		font-family: $roboto-regular;
 		font-size: 14px;
 		color: #636770;
@@ -226,6 +227,66 @@
 		text-decoration: none;
 		color: $white !important;
 		&:visited { color: $white !important; text-decoration: none }
+	}
+
+	.form-comment {
+		background-color: #F3F5FB;
+
+		h3 {
+			margin-bottom: 20px;
+			font-family: $roboto-bold;
+			font-size: 26px;
+			color: #636770;
+
+			i {
+				margin-right: 10px;
+				color: $purple;
+				font-size: 21px;
+			}
+		}
+
+		textarea {
+			width: 100%;
+			height: 120px;
+			margin-top: 18px;
+			padding: 10px;
+			border-radius: 4px;
+			border: 2px solid $white;
+			-webkit-transition: all .2s ease-out;
+	        -moz-transition: all .2s ease-out;
+	        -ms-transition: all .2s ease-out;
+	        -o-transition: all .2s ease-out;
+	        transition: all .2s ease-out;
+
+	        &:focus {
+	            border: 2px solid $purple;
+	            outline: none;
+	        }
+		}
+
+		input[type="submit"] {
+			float: right;
+			border: 0;
+		    margin: 10px 0;
+		    border-radius: 5px;
+		    padding: 15px 25px;
+		    font-family: $roboto-regular;
+		    font-size: 16px;
+		    text-transform: uppercase;
+		    color: $white;
+		    background-color: $purple;
+		    border-color: $purple;
+		    -webkit-transition: all .2s ease-out;
+		    -moz-transition: all .2s ease-out;
+		    -ms-transition: all .2s ease-out;
+		    -o-transition: all .2s ease-out;
+		    transition: all .2s ease-out;
+
+		    &:hover {
+			    background-color: $orange !important;
+			    border-color: $orange !important;
+		    }
+		}
 	}
 }
 
@@ -321,6 +382,47 @@
     // }
 }
 
+.tags {
+	padding: 15px 25px;
+	font-family: $roboto-bold;
+	font-size: 18px;
+	color: $gray;
+
+	i {
+		transform: scaleX(-1);
+		color: $purple;
+		font-size: 22px;
+		margin-right: 8px;
+	}
+
+	a {
+		font-family: $roboto-bold;
+		font-size: 12px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $gray;
+		border-radius: 5px;
+	    background-color: #F3F5FB;
+	    padding: 5px 8px;
+	    margin: 0 10px;
+
+	    &:hover {
+	    	background-color: $purple;
+	    	color: $white;
+	    	-webkit-transition: all .2s ease-out;
+		    -moz-transition: all .2s ease-out;
+		    -ms-transition: all .2s ease-out;
+		    -o-transition: all .2s ease-out;
+		    transition: all .2s ease-out;
+	    }
+
+	    &:visited {
+	    	color: $gray;
+	    	&:hover {color: $white;}
+	    }
+	}
+}
+
 .realty_widget {
 	margin: 0px;
 	padding: 10px 0;
@@ -359,6 +461,82 @@
 	    time {
 	    	color: #B6B5B5;
 	    	text-transform: uppercase;
+	    }
+	}
+}
+
+#comments {
+	article {
+		margin-bottom: 20px;
+	}
+
+	figure {
+		display: inline-block;
+		float: left;
+		margin-right: 15px;
+
+		img {
+			border-radius: 5px;
+		}
+	}
+
+	.author-name {
+		float: left;
+		width: 50%;
+		font-family: $roboto-bold;
+		font-size: 16px;
+		color: $gray;
+	}
+
+	time {
+		float: left;
+		width: 38%;
+		text-align: right;
+		font-family: $roboto-bold;
+		font-size: 16px;
+		color: $gray;
+	}
+
+	.comentario {
+		float: left;
+		margin-top: 10px;
+		width: 85%;
+		font-family: $roboto-regular;
+		font-size: 14px;
+		color: $gray;
+	}
+
+	footer {
+	    display: block;
+	    margin: 10px 0 10px 50px;
+	    padding: 0;
+	    float: left;
+	    background-color: #F3F5FB;
+	}
+
+	.comment-reply-link {
+		font-family: $roboto-regular;
+		font-size: 14px;
+		text-decoration: none;
+		color: $white;
+		border-radius: 5px;
+	    background-color: #4A4177;
+	    padding: 5px 15px;
+	    margin: 0 10px;
+
+	    &:hover {
+	    	background-color: $orange;
+	    	color: $white;
+	    	-webkit-transition: all .2s ease-out;
+		    -moz-transition: all .2s ease-out;
+		    -ms-transition: all .2s ease-out;
+		    -o-transition: all .2s ease-out;
+		    transition: all .2s ease-out;
+	    }
+
+	    &:visited {
+	    	color: $white;
+	    	&:hover {color: $white;}
 	    }
 	}
 }
@@ -424,6 +602,18 @@
 			float: left;
 			width: 305px;
 		}
+
+		.chamada-news {
+			width: 550px;
+			h1 {
+				font-size: 67px;
+			}
+		}
+
+		.form-news {
+			width: 400px;
+			font-size: 12px;
+		}
 	}
 }
 
@@ -444,6 +634,8 @@
     -ms-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
+
+    i { transform: scaleX(-1); }
 
     &:hover {
     	background-color: $purple;

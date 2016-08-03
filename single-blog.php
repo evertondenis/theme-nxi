@@ -47,8 +47,6 @@ $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID
 	                            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
 	                            <script type="IN/Share" data-counter="right"></script>
 	                        </div>
-	                        
-	                        
 	                        <div class="icones">
 	                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	                        </div>
@@ -56,6 +54,8 @@ $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID
 	                    </div>
 	                </section>
 	                <section><?php if ( function_exists( 'wpsabox_author_box' ) ) echo wpsabox_author_box(); ?></section>
+	                <section class="tags"><i class="fa fa-tag" aria-hidden="true"></i><?php the_tags(); ?></section>
+	                <?php comments_template( '/comments.php' ); ?>
 				<?php endwhile; ?>
 			<?php else:  ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

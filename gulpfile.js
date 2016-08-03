@@ -14,7 +14,7 @@ gulp.task('clean', function() {
 gulp.task('sass', function() {
 	return gulp.src('scss/**/*.scss')
 	    .pipe(sass().on('error', sass.logError))
-	    .pipe(sass({outputStyle: 'extended'}))
+	    .pipe(sass({outputStyle: 'compressed'}))
 	    .pipe(sourcemaps.init())
 	    .pipe(rename('nextidea.css'))
 	    .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: 'assets/css'}))
