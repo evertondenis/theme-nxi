@@ -12,7 +12,7 @@
 
 			foreach( $ctaPost as $post ) : setup_postdata($post); ?>
 				<h1><?php the_title(); ?></h1>
-				<p><a class="btn btn-primary btn-lg" href="<?php the_permalink(); ?>"><span>Saiba Mais</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+				<p><a class="btn btn-orange btn-lg" href="<?php the_permalink(); ?>"><span>Saiba Mais</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 			<?php endforeach; ?>
 		</div>
 	</section>

@@ -39,7 +39,7 @@
                <div class="overlay-image">
                		<div class="fazer-parte">
                			<p>Quer fazer parte deste time?</p>
-               			<p><a class="btn btn-primary btn-lg" href="#" title="Quer fazer parte deste time?"><span>Entre em contato</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+               			<p><a class="btn btn-orange btn-lg" href="#" title="Quer fazer parte deste time?"><span>Entre em contato</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
                		</div>
                </div>
            </div>

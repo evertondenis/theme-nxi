@@ -16,7 +16,7 @@
 		  	<div class="col-md-6">
 				<h1><span>E-BOOK</span><br>GRÁTIS</h1>
 				<p><?php the_title(); ?></p>
-				<p><a class="btn btn-primary btn-lg" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><span>Baixar e-book</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+				<p><a class="btn btn-orange btn-lg" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><span>Baixar e-book</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 			</div>
 
 		  	<?php if (has_post_thumbnail( $post->ID ) ): ?>

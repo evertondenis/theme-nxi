@@ -16,6 +16,7 @@ require_once('wp_bootstrap_navwalker.php');
 
 function scripts_do_template() {
     wp_register_script('bootstrap', get_template_directory_uri().'/assets/lib/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
+    wp_register_script('numberanimation', get_template_directory_uri().'/assets/js/jquery.animateNumber.min.js');
     wp_register_script('headroom', get_template_directory_uri().'/assets/js/headroom.js', array(), '', true );
     wp_register_script('slide', get_template_directory_uri().'/assets/js/jquery.slides.js', array(), '', true );
     wp_register_script('scripts', get_template_directory_uri().'/assets/js/scripts.js#asyncload', array(), '', true );
@@ -26,6 +27,7 @@ function scripts_do_template() {
     wp_enqueue_script('style-nxi');
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
+    wp_enqueue_script('numberanimation');
     wp_enqueue_script('headroom');
     wp_enqueue_script('slide');
     wp_enqueue_script('scripts');
@@ -42,7 +44,7 @@ function wpt_setup() {
 }
 
 function nxi_theme_support() {
-    add_theme_support( 'post-thumbnails', array( 'post', 'blog', 'ctas', 'page', 'case', 'destaques', 'clientes', 'parceiros', 'portfolio', 'team', 'testimonial' ));
+    add_theme_support( 'post-thumbnails', array( 'post', 'blog', 'ctas', 'page', 'case', 'destaque', 'clientes', 'parceiros', 'portfolio', 'team', 'testimonial' ));
     add_theme_support( 'post-formats', array( 'quote', 'gallery','video', 'audio' ) );
 }
 

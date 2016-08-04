@@ -2,9 +2,19 @@
 <?php
 $banner = $dynamic_featured_image->get_featured_images( $post->ID );
 $banner =  $banner[0]['full'];
+
+$bg =  str_replace(" ", "", get_field('background'));
+$bg = explode(",", $bg);
+$total = count($bg);
+
+if($total > 1 && $total <= 2) {
+  $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
+} else {
+  $bg = 'background-color: ' . $bg[0];
+}
 ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="single-page" style="background:#6653C7 url(<?php echo $banner ?>) center 0 no-repeat;">
+    <div class="single-page" style="<?php echo $bg ?>">
         <div class="container">
             <section>
                 <article>
@@ -38,24 +48,30 @@ $banner =  $banner[0]['full'];
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
+                <?php if (get_field('desafio')) : ?>
                     <article>
                         <h1>Desafio</h1>
                         <?php the_field('desafio'); ?>
                     </article>
+                <?php endif; ?>
                 </div>
                 <div class="col-md-6">
+                <?php if (get_field('problema')) : ?>
                     <article>
                         <h1>Problema</h1>
                         <?php the_field('problema'); ?>
                     </article>
+                <?php endif; ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
+                <?php if (get_field('solucao')) : ?>
                     <article>
                         <h1>Solução</h1>
                         <?php the_field('solucao'); ?>
                     </article>
+                <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -70,6 +86,56 @@ $banner =  $banner[0]['full'];
             </div>
         </div>
     </section>
+     <section class="resultados" style="<?php echo $bg ?>">
+        <div class="container">
+            <h1>Resultados</h1>
+            <div class="row">
+                
+                <div class="col-md-3">
+                <?php if (get_field('lead')) : ?>
+                    <article>
+                        <h1>leads</h1>
+                        <p><span><?php the_field('lead'); ?></span><span class="perc">%</span></p>
+                        <p>Crescimento em leads qualificados gerados.</p>
+                    </article>
+                <?php endif; ?>
+                </div>
+                
+                <div class="col-md-3">
+                <?php if (get_field('visitas')) : ?>
+                    <article>
+                        <h1>Visitas</h1>
+                        <p><span><?php the_field('visitas'); ?></span><span class="perc">%</span></p>
+                        <p>Visitas convertidos em orçamentos no website</p>
+                    </article>
+                <?php endif; ?>
+                </div>
+                
+                <div class="col-md-3">
+                <?php if (get_field('rejeicao')) : ?>
+                    <article>
+                        <h1>Rejeição</h1>
+                        <p><span><?php the_field('rejeicao'); ?></span><span class="perc">%</span></p>
+                        <p>Redução da Taxa de Rejeição do Website</p>
+                    </article>
+                <?php endif; ?>
+                </div>
+
+                <div class="col-md-3">
+                <?php if (get_field('social_media')) : ?>
+                    <article>
+                        <h1>Social Media</h1>
+                        <p><span><?php the_field('social_media'); ?></span><span class="perc">%</span></p>
+                        <p>Crescimento de seguidores em redes sociais (s/mídia)</p>
+                    </article>
+                <?php endif; ?>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <?php get_template_part( 'includes/ctas' ); ?>
 
     <?php
        global $post;

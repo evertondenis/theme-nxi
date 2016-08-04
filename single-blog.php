@@ -32,7 +32,9 @@ $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID
 							<div class="conteudo">
 								<p class="title-categoria"><?php echo get_the_term_list( $post->ID, 'category', '', ' , '); ?></p><hr>
 								<h1><?php the_title(); ?></h1>
-								<span class="author"><?php the_author() ?>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;</span><span class="tb-post-time"><time datetime="<?php the_time('Y-m-d g:i') ?>"> <?php the_time('j') ?> de <?php the_time('F') ?> de <?php the_time('Y') ?></time></span>
+								<span class="author"><?php the_author() ?>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+								<span class="tb-post-time"><time datetime="<?php the_time('Y-m-d g:i') ?>"> <?php the_time('j') ?> de <?php the_time('F') ?> de <?php the_time('Y') ?></time></span>
+								<span class="author">&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;<?php comments_number('No Comments', '1 Comment', '% Comments' );?></span>
 								<p><?php the_content(); ?></p>
 							</div>
 						</div>

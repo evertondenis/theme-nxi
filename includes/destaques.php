@@ -19,7 +19,7 @@ while ($destaques_query->have_posts()) : $destaques_query->the_post();
 		<div class="col-md-6">
 			<h1><?php the_title(); ?></h1>
 			<p><?php the_content(); ?></p>
-			<p><a class="btn btn-primary btn-lg" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><span>Texto do Botão</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+			<p><a class="btn btn-orange btn-lg" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><span>Texto do Botão</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 		</div>
 		
 	</div>

@@ -15,6 +15,7 @@
             <?php endif; ?>
         </section>
         <?php get_template_part( 'includes/inbound' ); ?>
+        <?php get_template_part( 'includes/servicos' ); ?>
         <?php get_template_part( 'includes/cases' ); ?>
         <?php get_template_part( 'includes/depoimentos' ); ?>
         <?php get_template_part( 'includes/clientes' ); ?>
