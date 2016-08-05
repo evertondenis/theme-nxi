@@ -8,7 +8,9 @@ endif;
     <section>
         <div class="container">
             <div class="col-md-12 page-header">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <h1><?php the_content();?></h1>
+            <?php endwhile; endif; ?>
             </div>
         </div>
         
@@ -21,13 +23,25 @@ endif;
                );
        $case_query = null;
        $case_query = new WP_Query($args);
-       $count = 1;
        if( $case_query->have_posts() ) {
          while ($case_query->have_posts()) : $case_query->the_post(); ?>
-            <article class="gradient-bg<?php echo $count ?>  case-list">
+         
+         <?php
+         $bg =  str_replace(" ", "", get_field('background'));
+         $bg = explode(",", $bg);
+         $total = count($bg);
+
+         if($total > 1 && $total <= 2) {
+          $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
+         } else {
+          $bg = 'background-color: ' . $bg[0];
+         }
+         ?>
+
+            <article class="case-list" style="<?php echo $bg ?>">
+
                 <div class="container">
                     <div class="col-md-4 content vcenter">
-                       <?php edit_post_link(); ?>
                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                        <p><?php the_excerpt(); ?></p>
                        <p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i> <span>ver case completo</span></a></p>
@@ -43,7 +57,6 @@ endif;
                 </div>
            </article>                    
        <?php
-         $count = (($count%3)==0) ? 1 : $count + 1;
          endwhile;
        }
        wp_reset_query();

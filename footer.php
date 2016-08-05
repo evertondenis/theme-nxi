@@ -1,7 +1,7 @@
             <footer>
             	<div class="container hr-border">
                     <div class="col-md-4">
-                        <h1 class="logo-footer"><a href="/" title="Next Idea, uma agência de Inbound Marketing"><img class="img-responsive" src="http://new.nextidea/wp-content/themes/nextidea/images/logo-next-idea-middle.png" width="131" height="57" alt="Titulo Imagem"></a></h1>
+                        <h1 class="logo-footer"><a href="/" title="Next Idea, uma agência de Inbound Marketing"><img class="img-responsive" src="<?php bloginfo('template_url');?>/images/logo-next-idea-middle.png" width="131" height="57" alt="Titulo Imagem"></a></h1>
                     </div>
                     <div class="col-md-8 text-right">
                         <ul>

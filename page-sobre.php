@@ -7,7 +7,6 @@
          <section style="background:transparent url(<?php echo $image[0]; ?>) center 0 no-repeat;" class="page-header">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article class="container">
-                <?php edit_post_link(); ?>
                 <?php the_content();?>
             </article>
             <?php endwhile; else: ?>

@@ -5,7 +5,7 @@
 */
 
 require_once( get_template_directory().'/includes/types/testimonial_type.php' );
-require_once( get_template_directory().'/includes/types/portfolio_type.php' );
+require_once( get_template_directory().'/includes/types/materiais_type.php' );
 require_once( get_template_directory().'/includes/types/cases_type.php' );
 require_once( get_template_directory().'/includes/types/team_type.php' );
 require_once( get_template_directory().'/includes/types/clientes_type.php' );
@@ -16,7 +16,6 @@ require_once('wp_bootstrap_navwalker.php');
 
 function scripts_do_template() {
     wp_register_script('bootstrap', get_template_directory_uri().'/assets/lib/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
-    wp_register_script('numberanimation', get_template_directory_uri().'/assets/js/jquery.animateNumber.min.js');
     wp_register_script('headroom', get_template_directory_uri().'/assets/js/headroom.js', array(), '', true );
     wp_register_script('slide', get_template_directory_uri().'/assets/js/jquery.slides.js', array(), '', true );
     wp_register_script('scripts', get_template_directory_uri().'/assets/js/scripts.js#asyncload', array(), '', true );
@@ -27,7 +26,6 @@ function scripts_do_template() {
     wp_enqueue_script('style-nxi');
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
-    wp_enqueue_script('numberanimation');
     wp_enqueue_script('headroom');
     wp_enqueue_script('slide');
     wp_enqueue_script('scripts');
@@ -44,7 +42,7 @@ function wpt_setup() {
 }
 
 function nxi_theme_support() {
-    add_theme_support( 'post-thumbnails', array( 'post', 'blog', 'ctas', 'page', 'case', 'destaque', 'clientes', 'parceiros', 'portfolio', 'team', 'testimonial' ));
+    add_theme_support( 'post-thumbnails', array( 'post', 'blog', 'ctas', 'page', 'case', 'materiais', 'destaque', 'clientes', 'parceiros', 'portfolio', 'team', 'testimonial' ));
     add_theme_support( 'post-formats', array( 'quote', 'gallery','video', 'audio' ) );
 }
 
@@ -53,6 +51,7 @@ function images_sizes() {
     add_image_size( 'thumb-post', 630, 315, true );
     add_image_size( 'img-post', 650, 440, true );
     add_image_size( 'thumb-post-sidebar', 90, 90, true );
+    add_image_size( 'thumb-cases', 305, 325, true );
 }
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
@@ -127,6 +126,29 @@ if (function_exists('register_sidebar')) {
         'before_widget' => '<div class="row"><div class="col-md-12">',
         'after_widget' => '<div class="clear">&nbsp;</div></div></div></div>',
         ));
+}
+
+function wp_list_categories_for_post_type($post_type, $args = '') {
+    $exclude = array();
+
+    // Check ALL categories for posts of given post type
+    foreach (get_categories() as $category) {
+        $posts = get_posts(array('post_type' => $post_type, 'category' => $category->cat_ID));
+
+        // If no posts found, ...
+        if (empty($posts))
+            // ...add category to exclude list
+            $exclude[] = $category->cat_ID;
+    }
+
+    // Set up args
+    if (! empty($exclude)) {
+        $args .= ('' === $args) ? '' : '&';
+        $args .= 'exclude='.implode(',', $exclude);
+    }
+
+    // List categories
+    wp_list_categories($args);
 }
 
 
