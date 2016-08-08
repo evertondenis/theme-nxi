@@ -439,8 +439,101 @@ section {
 
     img {
         float: left;
-        margin-right: 25px;
+        margin-right: 10px;
         margin-bottom: 45px;
+    }
+}
+
+.servicos {
+    background-color: #6653c7;
+    padding: $padding-section 0;
+
+    h1 {
+        color: $white;
+        font-family: $roboto-light;
+        text-transform: uppercase;
+        span {
+            color: $white;
+            font-family: $roboto-light;
+            text-transform: uppercase;
+        }
+    }
+    h2 {
+        color: $purple;
+        font-family: $roboto-light;
+    }
+
+    .container-services {
+        padding: 0;
+        background-color: transparent;    
+
+        .list-servicos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .box-servico {
+                margin: 0 10px 20px;
+                color: #4E4E4E;
+                text-decoration: none;
+                flex: 1 0 225px;
+                width: 100%;
+                // display: flex;
+                background-color: #fff;
+                border-radius: 5px;
+
+                figure {
+                    padding: 0px;
+                    background-image: none;
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 105px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                .info-servico {
+                    position: relative;
+                    display: block;
+                    width: auto;
+                    height: auto;
+                    margin: 0 auto;
+                    font-family: $roboto-regular;
+                    font-size: 14px;
+                    text-align: center;
+
+                    p {
+                        padding: 0 15px;
+                        font-family: $roboto-regular;
+                        font-size: 14px;
+                    }
+
+                    a {
+                        display: block;
+                        padding: 20px;
+                        background-color: #eaecee;
+                        font-family: $roboto-regular;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        color: #6653c7;
+                        transition: all 0.2s ease-out;
+                        border-radius: 0 0 5px 5px;
+
+                        &:hover {
+                            background-color: #fb3b0e;
+                            color: $white;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .title {
+                        font-family: $roboto-bold;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -931,6 +1024,8 @@ footer {
     }
 }
 
+.no-padding { padding: 0; }
+
 @media (max-width: 768px) {
     h1 {
         font-size: $md-title;
@@ -981,4 +1076,10 @@ footer {
 }
 :-moz-placeholder { /* Firefox 18- */
   color: $gray;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
 }

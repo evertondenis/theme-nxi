@@ -8,7 +8,7 @@
 			$args = array(
 					'post_type' => 'team',
 					'post_status' => 'publish',
-					'orderby' => rand
+					'posts_per_page' => 10
 					);
 			$team_query = null;
 			$team_query = new WP_Query($args);

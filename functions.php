@@ -11,6 +11,7 @@ require_once( get_template_directory().'/includes/types/team_type.php' );
 require_once( get_template_directory().'/includes/types/clientes_type.php' );
 require_once( get_template_directory().'/includes/types/parceiros_type.php' );
 require_once( get_template_directory().'/includes/types/destaques_type.php' );
+require_once( get_template_directory().'/includes/types/servicos_type.php' );
 
 require_once('wp_bootstrap_navwalker.php');
 
@@ -42,7 +43,7 @@ function wpt_setup() {
 }
 
 function nxi_theme_support() {
-    add_theme_support( 'post-thumbnails', array( 'post', 'blog', 'ctas', 'page', 'case', 'materiais', 'destaque', 'clientes', 'parceiros', 'portfolio', 'team', 'testimonial' ));
+    add_theme_support( 'post-thumbnails', array( 'post', 'servicos', 'blog', 'ctas', 'page', 'case', 'materiais', 'destaque', 'clientes', 'parceiros', 'portfolio', 'team', 'testimonial' ));
     add_theme_support( 'post-formats', array( 'quote', 'gallery','video', 'audio' ) );
 }
 
@@ -52,6 +53,7 @@ function images_sizes() {
     add_image_size( 'img-post', 650, 440, true );
     add_image_size( 'thumb-post-sidebar', 90, 90, true );
     add_image_size( 'thumb-cases', 305, 325, true );
+    add_image_size( 'thumb-servicos', 105, 105, true );
 }
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );

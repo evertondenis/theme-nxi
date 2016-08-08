@@ -9,7 +9,7 @@
 			$args = array(
 					'post_type' => 'clientes',
 					'post_status' => 'publish',
-					'orderby' => rand
+					'posts_per_page' => 50
 					);
 			$clientes_query = null;
 			$clientes_query = new WP_Query($args);

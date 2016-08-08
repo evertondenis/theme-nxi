@@ -13,6 +13,7 @@
 			$args = array(
 					'post_type' => 'parceiros',
 					'post_status' => 'publish',
+					'posts_per_page' => 10,
 					'orderby' => rand
 					);
 			$parceiros_query = null;
