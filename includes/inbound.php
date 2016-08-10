@@ -15,7 +15,9 @@
 		</div>
 		<div class="col-md-6">
 			<p><?php the_content(); ?></p>
-			<p><a class="btn btn-blue-light btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span>Conheça mais o Inbound</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+
+			
+			<p><a class="btn btn-blue-light btn-lg" href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="<?php the_title(); ?>"><span><?php echo get_field('text_button') ?></span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 		</div>
 		<?php endforeach; ?>
 	</div>

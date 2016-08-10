@@ -10,7 +10,7 @@ $total = count($bg);
 if($total > 1 && $total <= 2) {
   $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
 } else {
-  $bg = 'background-color: ' . $bg[0];
+  $bg = 'background-color: #' . $bg[0];
 }
 ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -155,7 +155,7 @@ if($total > 1 && $total <= 2) {
          if($total > 1 && $total <= 2) {
           $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
          } else {
-          $bg = 'background-color: ' . $bg[0];
+          $bg = 'background-color: #' . $bg[0];
          }
          ?>
             <article class="case-list" style="<?php echo $bg ?>">

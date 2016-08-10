@@ -136,14 +136,27 @@
     }
 
 	.chamada-news {
-		padding-right: 50px; 
+		padding-right: 50px;
+		margin-top: -20px;
 		width: 100%;
 		float: left;
 		color: #fff;
 
 		h1 {
-			font-family: $roboto-bold;
-			font-size: 30px;
+			font-family: $roboto-regular;
+			font-size: 67px;
+			color: #fff;
+
+			strong {
+				font-family: $roboto-bold;
+				font-size: 67px;
+				color: #fff;
+			}
+		}
+
+		h2 {
+			font-family: $roboto-light;
+			font-size: 20px;
 			color: #fff;
 		}
 	}

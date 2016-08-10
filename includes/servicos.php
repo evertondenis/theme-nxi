@@ -41,12 +41,7 @@ $page_data = get_page_by_path($page_slug);
                         <div class="info-servico">
                         	<p class="title" style="<?php echo $bg ?>"><?php the_title(); ?></p>
                         	<p><?php the_excerpt(); ?></p>
-
-                        	<?php if (get_field('url')) : ?>
-                        		<a href="<?php echo get_field('url'); ?>" title="<?php the_title(); ?>">Saiba mais</a>
-                        	<?php else: ?>
-                        		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Saiba mais</a>
-                        	<?php endif; ?>
+                        	<a href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="<?php the_title(); ?>">Saiba mais</a>
                         	
                         </div>
                     </div>

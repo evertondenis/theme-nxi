@@ -14,10 +14,10 @@ $chamada = $queried_post->post_content;
 $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID ), 'single-post-thumbnail' );
 ?>
 <section class="blog-archive">
-	<div class="row" style="background: #fff url(<?php echo $imagebg[0] ?>) no-repeat; height: 540px; padding-top:200px;">
+	<div class="row" style="background: #fff url(<?php echo $imagebg[0] ?>) no-repeat; height: 540px; padding-top:190px;">
 		<div class="container">
 			<div class="chamada-news"><?php echo $chamada; ?></div>
-			<div class="form-news"><?php echo do_shortcode( '[contact-form-7 id="4496" title="NEW Newsletter"]' ); ?></div>
+			<div class="form-news"><?php echo do_shortcode( '[contact-form-7 id="75" title="NEW Newsletter"]' ); ?></div>
 		</div>
 	</div>
 </section>

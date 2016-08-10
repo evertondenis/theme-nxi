@@ -5,11 +5,17 @@
         endif;
         ?>
          <section class="contato" style="background:transparent url(<?php echo $image[0]; ?>) center 0 no-repeat;">
-            <div class="container">
-                <div class="col-md-12 page-header">
-                    <h1><?php the_content();?></h1>
-                </div>
-            </div>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <article class="container">
+                    <?php the_content();?>
+                    <div class="bounce" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                    <div class="bounce2" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                    <div class="bounce3" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+
+                </article>
+            <?php endwhile; else: ?>
+                <p><?php _e('Desculpe, essa página não existe.'); ?></p>
+            <?php endif; ?>
         </section>
         <section class="form-contact">
             <div class="container">

@@ -37,49 +37,15 @@ $banner =  $banner[0]['full'];
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 conteudo">
                     <?php the_content(); ?>
                 </div>
             </div>
         </div>
     </section>
 
-    <?php
-       global $post;
-       $args = array(
-               'post_type' => 'case',
-               'post_status' => 'publish',
-               'orderby' => rand
-               );
-       $case_query = null;
-       $case_query = new WP_Query($args);
-       $count = 1;
-       if( $case_query->have_posts() ) {
-         while ($case_query->have_posts()) : $case_query->the_post(); ?>
-            <article class="gradient-bg<?php echo $count ?>  case-list">
-                <div class="container">
-                    <div class="col-md-4 content">
-                       <?php edit_post_link(); ?>
-                       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                       <p><?php the_excerpt(); ?></p>
-                       <p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i> <span>ver case completo</span></a></p>
-                   </div>
-                   <div class="col-md-8">
-                       <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-                           <figure>
-                               <img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
-                           </figure>
-                       <?php endif; ?>
-                   </div>
-                </div>
-           </article>                    
-       <?php
-         $count = (($count%3)==0) ? 1 : $count + 1;
-         endwhile;
-       }
-       wp_reset_query();
-       ?>
+    <?php get_template_part( 'includes/cases' ); ?>
+
 <?php endwhile; else: ?>
 <p><?php _e('Desculpe, essa página não existe.'); ?></p>
 <?php endif; ?>

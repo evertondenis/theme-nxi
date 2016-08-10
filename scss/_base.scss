@@ -32,7 +32,6 @@ h2 {
 }
 
 ul {
-    padding-top: 35px;
     float: right;
     li {
         display: inline;
@@ -113,10 +112,18 @@ section {
 }
 
 .banner {
-	padding-top: 150px;
-    // background: transparent url(../../images/banner-1.jpg) center no-repeat;
+	padding-top: 200px;
     min-height: 830px;
     color: $white;
+
+    h1 {
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-family: $roboto-light;
+        font-size: 20px;
+    }
 }
 
 .inbound {
@@ -216,6 +223,63 @@ section {
     }
 }
 
+.sobre {
+    .title {
+        margin-bottom: 0;
+        font-family: $roboto-bold;
+        font-size: 48px;
+        color: $white;
+    }
+
+    p {
+        font-family: $roboto-light;
+        font-size: 16px;
+        color: $white;
+    }
+}
+
+.sobre-nxi {
+    padding-top: $padding-section;
+    background-color: $bg-gray-light;
+    padding-bottom: $padding-section;
+
+    h1 {
+        color: $purple;
+        font-family: $roboto-regular;
+        font-size: 70px;
+    }
+    h2 {
+        color: $purple;
+        font-family: $roboto-regular;
+    }
+}
+
+.sobre-case {
+    .cases-home {
+        color: $white;
+        h1 {
+            color: $white;
+            span {
+                color: $white;
+            }
+        }
+        h2 {
+            color: $white;
+            a {
+                color: $white;
+                &:hover {
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .btn-ler-mais{color: $white;}
+        .btn-ler-mais:active{color: $white;}
+        .btn-ler-mais:focus{color: $white;}
+        .btn-ler-mais:visited{color: $white;}
+    }
+}
+
 .gradient-bg1 {
     background-image: linear-gradient(to right, #f42041, #efac6b);
 }
@@ -292,6 +356,40 @@ section {
     }
 }
 
+.page-cases {
+    min-height: 740px;
+    /* habilita o flex nos filhos diretos */
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    /* centraliza na vertical */
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* centraliza na horizontal */
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    
+    article {
+        text-align: center;
+        vertical-align: middle;
+
+        h1 {
+            font-family: $roboto-light;
+            font-size: 67px;
+            color: $white;
+
+            strong {
+                font-family: $roboto-bold;
+                font-size: 67px;
+            }
+        }
+    }
+}
+
 .container-cases {
     padding: 60px 0;
     background-color: #F3F5FB;
@@ -301,6 +399,10 @@ section {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+.conteudo {
+    padding: 30px 20px;
 }
 
 .filter-cases {
@@ -705,12 +807,38 @@ section {
 }
 
 .contato {
-    text-align: center;
+    min-height: 740px;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    h1 {
+        margin-bottom: 0;
+        font-family: $roboto-light;
+        font-size: 67px;
+        color: $white;
+
+        strong {
+            font-family: $roboto-bold;
+            font-size: 60px;
+        }
+    }
     
     h2 {
         font-family: $roboto-light;
         font-size: 20px;
         color: $white;
+    }
+
+    .container {
+        text-align: center;
+        vertical-align: middle;
     }
 }
 
@@ -718,7 +846,7 @@ section {
     margin-top: 60px;
 
     .container {
-        width: 860px;
+        width: 100%;
     }
 
     .btn-primary { margin-top: 15px }
@@ -741,6 +869,7 @@ section {
     }
     
     img {
+        max-width: 75% !important;
         margin-bottom: 30px;
         vertical-align: top;
         display: inline-block;
@@ -781,11 +910,11 @@ section {
 
         background: linear-gradient(to top right, #8527dc, #2acbfb);
         opacity:0;
-        -webkit-transition: all .3s ease-out;
-        -moz-transition: all .3s ease-out;
-        -ms-transition: all .3s ease-out;
-        -o-transition: all .3s ease-out;
-        transition: all .3s ease-out;
+        -webkit-transition: all .32s ease-out;
+        -moz-transition: all .32s ease-out;
+        -ms-transition: all .32s ease-out;
+        -o-transition: all .32s ease-out;
+        transition: all .32s ease-out;
 
         p {
             margin: 0;
@@ -807,7 +936,7 @@ section {
 
     &:hover{
         .after {
-            opacity: 1;
+            opacity: 0.9;
         }
     }
 
@@ -1006,16 +1135,22 @@ a {
 }
 
 footer {
-    background: $white url(../../images/title-contato.png) center 210px no-repeat;
+    background: #F3F5FB url(../../images/title-contato.png) center 210px no-repeat;
     padding: 55px 0;
 
     ul {
         width: auto;
+        padding: 0px;
     }
 
     li {
         text-align: center;
         float: left;
+        margin-bottom: 10px;
+    }
+
+    .hr-border {
+        margin-bottom: 105px;
     }
 
     .col-md-8 {
@@ -1082,4 +1217,80 @@ footer {
     .container {
         width: 1000px;
     }
+    .form-contact {
+        .container {
+            width: 860px;
+        }
+    }
+    .contato {
+        h1 {
+            strong {
+                font-size: 67px;
+            }
+        }
+    }
+
+    footer {
+        ul {
+            width: auto;
+            padding-top: 35px;
+        }
+
+        li {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.bounce {
+    font-size: 25px;
+    color: $white;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+}
+.bounce2 {
+    margin-top: -17px;
+    font-size: 25px;
+    color: $white;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+    animation-delay: .5s;
+}
+.bounce3 {
+    margin-top: -17px;
+    font-size: 25px;
+    color: $white;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+    animation-delay: 1s;
+}
+ 
+@-webkit-keyframes bounce {
+    0% { opacity: 1; }
+    50% { opacity: .2; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes bounce {
+    0% { opacity: 1; }
+    50% { opacity: .2; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes bounce {
+    0% { opacity: 1; }
+    50% { opacity: .2; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0% { opacity: 1; }
+    50% { opacity: .2; }
+    100% { opacity: 1; }
 }

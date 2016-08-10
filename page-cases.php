@@ -5,15 +5,20 @@
 endif;
 ?>
 <div class="row" style="background:transparent url(<?php echo $image[0]; ?>) center 0 no-repeat;">
-    <section>
-        <div class="container">
-            <div class="col-md-12 page-header">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <section class="page-cases">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <article class="container">
                 <h1><?php the_content();?></h1>
-            <?php endwhile; endif; ?>
-            </div>
-        </div>
-        
+                <div class="bounce" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="bounce2" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="bounce3" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </article>
+        <?php endwhile; else: ?>
+            <p><?php _e('Desculpe, essa página não existe.'); ?></p>
+        <?php endif; ?>
+    </section>
+
+    <section>        
        <?php
        global $post;
        $args = array(
@@ -34,7 +39,7 @@ endif;
          if($total > 1 && $total <= 2) {
           $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
          } else {
-          $bg = 'background-color: ' . $bg[0];
+          $bg = 'background-color: #' . $bg[0];
          }
          ?>
 

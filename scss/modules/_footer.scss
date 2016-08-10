@@ -1,5 +1,6 @@
 .logo-footer {
 	width: 131px;
+	margin-bottom: 0px;
 }
 
 .hr-border { 
@@ -11,18 +12,19 @@
 .box-footer {
     margin: 10px auto;
     padding: 50px 20px;
-    width: 80%;
+    width: 88%;
+    border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 5px 10px 2px rgba(139, 152, 190, 0.55);
     p {
     	font-family: $roboto-medium;
     	color: #3a3c44;
-    	font-size: 22px;
+    	font-size: 20px;
     	line-height: 100%;
     	span {
     		font-family: $roboto-regular;
 	    	color: #3a3c44;
-	    	font-size: 26px;
+	    	font-size: 22px;
     	}
     }
 }
