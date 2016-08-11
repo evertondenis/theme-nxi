@@ -25,7 +25,7 @@ if($total > 1 && $total <= 2) {
 		<div class="container text-center">
 			<?php
 			foreach( $ctaPost as $post ) : setup_postdata($post); ?>
-				<h1><?php the_title(); ?></h1>
+				<h1><?php the_content(); ?></h1>
 				<p><a class="btn btn-orange btn-lg" href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>"><span><?php echo get_field('text_button') ?></span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
 			<?php endforeach; ?>
 		</div>
