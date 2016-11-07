@@ -5,11 +5,11 @@
                     </div>
                     <div class="col-md-8 text-right">
                         <ul>
-                            <li><a href="#" class="ico-facebook" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="ico-twitter" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="ico-google-plus" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="ico-linkedin" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="ico-instagram" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/nextideadigital" target="_blank" class="ico-facebook" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/nextideadigital" target="_blank" class="ico-twitter" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="https://plus.google.com/u/0/+NextideaBr" target="_blank" class="ico-google-plus" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/next-idea-estrategia-digital" target="_blank" class="ico-linkedin" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/nextideadigital/" target="_blank" class="ico-instagram" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
             	</div>

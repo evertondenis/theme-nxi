@@ -17,8 +17,10 @@ foreach( $ctaPost as $post ) {
 
 if($total > 1 && $total <= 2) {
 	$bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
-} else {
+} elseif($bg[0] != '') {
 	$bg = 'background-color: #' . $bg[0];
+} else {
+	$bg = 'background-color: #F0F3F5';
 }
 ?>
 <section class="cta" style="<?php echo $bg ?>">

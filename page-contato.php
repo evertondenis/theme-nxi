@@ -8,18 +8,19 @@
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article class="container">
                     <?php the_content();?>
-                    <div class="bounce" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-                    <div class="bounce2" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-                    <div class="bounce3" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-
                 </article>
             <?php endwhile; else: ?>
                 <p><?php _e('Desculpe, essa página não existe.'); ?></p>
             <?php endif; ?>
         </section>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="bounce" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+          </div>
+        </div>
         <section class="form-contact">
             <div class="container">
-                <?php echo do_shortcode( '[contact-form-7 id="4471" title="New Contato"]' ); ?>
+                <?php echo do_shortcode( '[contact-form-7 id="5" title="New Contato"]' ); ?>
             </div>
         </section>
         

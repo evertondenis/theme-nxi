@@ -7,129 +7,123 @@ $bg =  str_replace(" ", "", get_field('background'));
 $bg = explode(",", $bg);
 $total = count($bg);
 
+$current_post = $post->ID;
+
 if($total > 1 && $total <= 2) {
   $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
 } else {
   $bg = 'background-color: #' . $bg[0];
 }
+$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="single-page" style="<?php echo $bg ?>">
+    <div class="single-page" style="background: transparent url(<?php echo get_field('background_image')['url'] ?>) no-repeat">
         <div class="container">
             <section>
                 <article>
                     <header>
                         <div class="container">
-                            <div class="col-md-4 vcenter">
-                               <div class="content">
-                                   <h2><?php the_field('brand');?></h2>
-                                   <h1><?php the_title();?></h1>
-                                   <p><?php the_excerpt(); ?></p>
-                               </div>
-                           </div>
-                           <div class="col-md-7 vcenter">
-                               <div class="content">
-                                    <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                                       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-                                       <figure>
-                                           <img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
-                                       </figure>
-                                   <?php endif; ?>
-                                </div>
-                           </div>
+                          <h1>Case de <strong>Sucesso</strong><br><strong><?php the_field('brand'); ?></strong></h1>
                         </div>
                     </header>
                 </article>
             </section>
         </div>
     </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="bounce" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+      </div>
+    </div>
     <section class="descricao">
         <div class="container">
             <div class="row">
+              <div class="col-md-8 title-case-container">
+                <?php echo get_field('titulo_case'); ?>
+              </div>
+            </div>
+            <div class="row col-flex">
                 <div class="col-md-6">
-                <?php if (get_field('desafio')) : ?>
-                    <article>
-                        <h1>Desafio</h1>
-                        <?php the_field('desafio'); ?>
-                    </article>
-                <?php endif; ?>
+                  <img src="<?php echo get_field('imagem_marca')['url'] ?>" alt="">
                 </div>
+                <?php if (get_field('desafio')) : ?>
                 <div class="col-md-6">
-                <?php if (get_field('problema')) : ?>
                     <article>
-                        <h1>Problema</h1>
+                        <?php the_field('desafio'); ?>
+                        <h2 class="problema-title">Problema</h2>
                         <?php the_field('problema'); ?>
                     </article>
-                <?php endif; ?>
                 </div>
+                <?php endif; ?>
             </div>
+            <?php if (get_field('solucao')) : ?>
             <div class="row">
-                <div class="col-md-12">
-                <?php if (get_field('solucao')) : ?>
-                    <article>
-                        <h1>Solução</h1>
-                        <?php the_field('solucao'); ?>
-                    </article>
-                <?php endif; ?>
-                </div>
+              <article class="solucao">
+                  <div class="col-md-5">
+                    <h2 class="problema-title">Solução</h2>
+                    <?php the_field('solucao'); ?>
+                  </div>
+                  <div class="col-md-7">
+                    <img src="<?php echo get_field('solucao_imagem')['url'] ?>" alt="">
+                  </div>
+                  <div class="clear"></div>
+              </article>
             </div>
+            <?php endif; ?>
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <?php the_content(); ?>
-                </div>
-            </div>
-        </div>
+    <section class="conteudo-extra">
+      <div class="row">
+        <?php the_content(); ?>
+      </div>
     </section>
-     <section class="resultados" style="<?php echo $bg ?>">
+     <section class="resultados">
         <div class="container">
             <h1>Resultados</h1>
             <div class="row">
-                
-                <div class="col-md-3">
+              <div class="container-resultados">
                 <?php if (get_field('lead')) : ?>
-                    <article>
-                        <h1>leads</h1>
-                        <p><span><?php the_field('lead'); ?></span><span class="perc">%</span></p>
-                        <p>Crescimento em leads qualificados gerados.</p>
-                    </article>
+                  <div class="col-resultado">
+                      <article>
+                          <h2><?php the_field('titulo_1'); ?></h2>
+                          <p><span><?php the_field('lead'); ?></span></p>
+                          <p class="legenda-resultado"><?php the_field('legenda_1'); ?></p>
+                      </article>
+                  </div>
                 <?php endif; ?>
-                </div>
                 
-                <div class="col-md-3">
                 <?php if (get_field('visitas')) : ?>
-                    <article>
-                        <h1>Visitas</h1>
-                        <p><span><?php the_field('visitas'); ?></span><span class="perc">%</span></p>
-                        <p>Visitas convertidos em orçamentos no website</p>
-                    </article>
+                  <div class="col-resultado">
+                      <article>
+                          <h2><?php the_field('titulo_2'); ?></h2>
+                          <p><span><?php the_field('visitas'); ?></span></p>
+                          <p class="legenda-resultado"><?php the_field('legenda_2'); ?></p>
+                      </article>
+                  </div>
                 <?php endif; ?>
-                </div>
                 
-                <div class="col-md-3">
                 <?php if (get_field('rejeicao')) : ?>
-                    <article>
-                        <h1>Rejeição</h1>
-                        <p><span><?php the_field('rejeicao'); ?></span><span class="perc">%</span></p>
-                        <p>Redução da Taxa de Rejeição do Website</p>
-                    </article>
+                  <div class="col-resultado">
+                      <article>
+                          <h2><?php the_field('titulo_3'); ?></h2>
+                          <p><span><?php the_field('rejeicao'); ?></span></p>
+                          <p class="legenda-resultado"><?php the_field('legenda_3'); ?></p>
+                      </article>
+                  </div>
                 <?php endif; ?>
-                </div>
 
-                <div class="col-md-3">
                 <?php if (get_field('social_media')) : ?>
-                    <article>
-                        <h1>Social Media</h1>
-                        <p><span><?php the_field('social_media'); ?></span><span class="perc">%</span></p>
-                        <p>Crescimento de seguidores em redes sociais (s/mídia)</p>
-                    </article>
+                  <div class="col-resultado">
+                      <article>
+                          <h2><?php the_field('titulo_4'); ?></h2>
+                          <p><span><?php the_field('social_media'); ?></span></p>
+                          <p class="legenda-resultado"><?php the_field('legenda_4'); ?></p>
+                      </article>
+                  </div>
                 <?php endif; ?>
-                </div>
-
+                <span class="stretch"></span>
+              </div>
             </div>
         </div>
     </section>
@@ -152,30 +146,40 @@ if($total > 1 && $total <= 2) {
          $bg = explode(",", $bg);
          $total = count($bg);
 
-         if($total > 1 && $total <= 2) {
-          $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
-         } else {
-          $bg = 'background-color: #' . $bg[0];
-         }
-         ?>
-            <article class="case-list" style="<?php echo $bg ?>">
-                <div class="container">
-                    <div class="col-md-4 content">
-                       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                       <p><?php the_excerpt(); ?></p>
-                       <p><a class="btn btn-ler-mais btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i> <span>ver case completo</span></a></p>
-                   </div>
-                   <div class="col-md-8">
-                       <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-                           <figure>
-                               <img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
-                           </figure>
-                       <?php endif; ?>
-                   </div>
-                </div>
-           </article>                    
-       <?php
+           if ($current_post != $post->ID) {
+           
+               if($postType != NULL && get_field('background_image')['url'] == '') :
+                  if($total > 1 && $total <= 2) {
+                    $bg = 'background-image: linear-gradient(to right, #' . $bg[0] . ',#' . $bg[1] . ');';
+                  } elseif($bg[0] != '') {
+                    $bg = 'background-color: #' . $bg[0];
+                  } else {
+                    $bg = 'background-color: #E6E9EC';
+                  }
+                ?>
+                <article class="case-list" style="<?php echo $bg ?>">
+                <?php else: ?>
+                <article class="case-list" style="background: transparent url(<?php echo get_field('background_image')['url'] ?>) no-repeat">
+                <?php endif; ?>
+                      <div class="container">
+                          
+                          <div class="col-md-7 col-dir col-md-push-5">
+                            <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                              <figure>
+                                <img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+                              </figure>
+                            <?php endif; ?>
+                          </div>
+                          <div class="col-md-5 col-md-pull-7">
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <p><?php the_excerpt(); ?></p>
+                            <p><a class="btn btn-orange btn-lg" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span>ver case completo</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+                          </div>
+                      </div>
+                 </article>                    
+             <?php
+          }
          endwhile;
        }
        wp_reset_query();

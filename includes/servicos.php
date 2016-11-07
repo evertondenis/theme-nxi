@@ -6,7 +6,9 @@ $page_data = get_page_by_path($page_slug);
 <section class="servicos">
 	<div class="container">
 		<div class="row">
-			<h1><span>Escolha o </span><br>Sucesso</h1>
+            <h1>
+                Sua empresa merece o melhor.<br> <strong>Conheça nossas outras soluções.</strong>
+            </h1>
 		</div>
 		
 		<section class="container-services">
@@ -35,13 +37,13 @@ $page_data = get_page_by_path($page_slug);
                     
                     <div class="box-servico">
                         <figure>
-                            <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+                            <a href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" /></a>
                         </figure>
 
                         <div class="info-servico">
-                        	<p class="title" style="<?php echo $bg ?>"><?php the_title(); ?></p>
+                        	<p class="title" style="<?php echo $bg ?>"><a style="<?php echo $bg ?>" href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></p>
                         	<p><?php the_excerpt(); ?></p>
-                        	<a href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="<?php the_title(); ?>">Saiba mais</a>
+                        	<!-- <a href="<?php //echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="<?php //the_title(); ?>">Saiba mais</a> -->
                         	
                         </div>
                     </div>

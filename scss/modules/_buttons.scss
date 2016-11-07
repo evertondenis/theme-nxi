@@ -1,4 +1,5 @@
 .btn-orange {
+    padding: 15px;
     margin: 15px 0 20px 0;
     font-family: $roboto-regular;
     font-size: 14px;
@@ -11,8 +12,10 @@
     -ms-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
+    text-decoration: none;
 
     &:active {
+        padding: 15px;
          margin: 15px 0 20px 0;
         font-family: $roboto-regular;
         font-size: 14px;
@@ -25,8 +28,10 @@
         -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
+        text-decoration: none;
     }
     &:focus {
+        padding: 15px;
          margin: 15px 0 20px 0;
         font-family: $roboto-regular;
         font-size: 14px;
@@ -39,8 +44,10 @@
         -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
+        text-decoration: none;
     }
     &:visited {
+        padding: 15px;
          margin: 15px 0 20px 0;
         font-family: $roboto-regular;
         font-size: 14px;
@@ -53,6 +60,7 @@
         -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
+        text-decoration: none;
     }
 
 	span {
@@ -63,6 +71,7 @@
 	    -ms-transition: all .2s ease-out;
 	    -o-transition: all .2s ease-out;
 	    transition: all .2s ease-out;
+        text-decoration: none;
 	}
 	i {
 		margin-left: 10px;
@@ -78,10 +87,12 @@
     	border-color: $white !important;
     	left: -10px;
         color: $orange;
+        text-decoration: none;
 
     	i {
     		margin-left: 20px;
     		color: $orange;
+
     	}
     	span {
     		left: -5px;
@@ -98,15 +109,19 @@
     color: $white;
     background-color: $blue-light;
     border-color: $blue-light;
+    text-decoration: none;
 
     &:active {
         @extend .btn-blue-light;
+        text-decoration: none;
     }
     &:focus {
         @extend .btn-blue-light;
+        text-decoration: none;
     }
     &:visited {
         @extend .btn-blue-light;
+        text-decoration: none;
     }
 
     span {
@@ -131,6 +146,7 @@
         background-color: $white !important;
         border-color: $white !important;
         left: -10px;
+        text-decoration: none;
 
         i {
             margin-left: 20px;
@@ -152,15 +168,19 @@
     font-size: 16px;
     text-transform: uppercase;
     color: $orange;
+    text-decoration: none;
 
     &:active {
         @extend .btn-ler-mais;
+        text-decoration: none;
     }
     &:focus {
         @extend .btn-ler-mais;
+        text-decoration: none;
     }
     &:visited {
         @extend .btn-ler-mais;
+        text-decoration: none;
     }
 
     span {
@@ -175,6 +195,7 @@
 
     &:hover {
         left: -10px;
+        text-decoration: none;
 
         i {
             color: $purple;
@@ -197,6 +218,7 @@
 
         &:hover {
             left: -10px;
+            text-decoration: none;
 
             i {
                 color: $white !important;
@@ -267,7 +289,10 @@
 }
 
 .c-hamburger--htx {
-    background-color: $button-color;
+    background-color:  #FC6F2E;
+    // background: linear-gradient(270deg, #FCA150 0%, #ED6D4A 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
 
     span {
         transition: background 0s $button-transistion-duration;
@@ -343,6 +368,7 @@
         -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
+        text-decoration: none;
     }
     &:focus {
          margin: 15px 0 20px 0;
@@ -357,6 +383,7 @@
         -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
+        text-decoration: none;
     }
     &:visited {
          margin: 15px 0 20px 0;
@@ -371,6 +398,7 @@
         -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
+        text-decoration: none;
     }
 
     span {
@@ -396,6 +424,7 @@
         border-color: $purple !important;
         left: -10px;
         color: $white;
+        text-decoration: none;
 
         i {
             margin-left: 20px;
@@ -442,6 +471,7 @@
             -ms-transition: all .2s ease-out;
             -o-transition: all .2s ease-out;
             transition: all .2s ease-out;
+            text-decoration: none;
         }
         &:focus {
             border: 0;
@@ -459,6 +489,7 @@
             -ms-transition: all .2s ease-out;
             -o-transition: all .2s ease-out;
             transition: all .2s ease-out;
+            text-decoration: none;
         }
         &:visited {
             border: 0;
@@ -476,6 +507,7 @@
             -ms-transition: all .2s ease-out;
             -o-transition: all .2s ease-out;
             transition: all .2s ease-out;
+            text-decoration: none;
         }
 
         span {
@@ -501,6 +533,7 @@
             border-color: $purple !important;
             left: -10px;
             color: $white;
+            text-decoration: none;
 
             i {
                 margin-left: 20px;

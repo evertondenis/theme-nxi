@@ -6,7 +6,7 @@
     width: 100%;
 
     &.slideDown {
-    	background-color: #6653C7;
+    	background-color: #33313C;
     	height: 75px;
 
     	.logo {
@@ -19,7 +19,7 @@
     }
     
     &.slideUp {
-    	background-color: #6653C7;
+    	background-color: #33313C;
     	-webkit-transition: all .2s ease-out;
 		-moz-transition: all .2s ease-out;
 		-ms-transition: all .2s ease-out;
@@ -77,11 +77,11 @@
 }
 
 .menu {
-    background: $nub;
+    background: #33313C;
     position: fixed;
-    top: 50px;
+    top: 60px;
     right: 0;
-    width: 80%;
+    width: 100%;
     // height: 100%;
     height: auto;
     padding: 30px 20px;
@@ -98,6 +98,7 @@
 			text-transform: uppercase;
 			opacity: 0;
 			transition: all .2s ease-out;
+			text-decoration: none;
 
 			&:hover {
 				color: $gray-x-light;
@@ -182,6 +183,6 @@
 	}
 
 	.box-servico {
-		max-width: 22%;
+		max-width: 30%;
 	}
 }

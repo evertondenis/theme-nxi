@@ -1,7 +1,7 @@
 <section class="clientes">
 	<div class="container">
 		<div class="row">
-			<h1><span>Nossos</span><br>Clientes</h1>
+			<h1>O <strong>SUCESSO DOS NOSSOS</strong><br>CLIENTES É TAMBÉM O NOSSO</h1>
 		</div>
 		<div class="distribute-imgs">
 			<?php
@@ -9,7 +9,8 @@
 			$args = array(
 					'post_type' => 'clientes',
 					'post_status' => 'publish',
-					'posts_per_page' => 50
+					'posts_per_page' => 50,
+					'orderby' => rand
 					);
 			$clientes_query = null;
 			$clientes_query = new WP_Query($args);
@@ -19,7 +20,11 @@
 					$clientes_query->the_post(); 
 					if (has_post_thumbnail( $post->ID ) ):
                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-                       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" /></a>
+                       <?php if (get_field('url') != '') : ?>
+                       <a href="<?php echo get_field('url') ?>" title="<?php the_title(); ?>" target="_blank"><img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" /></a>
+                       <?php else: ?>
+                       	<a href="javascript:void(0);" title="<?php the_title(); ?>" target="_blank"><img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" /></a>
+                       	<?php endif; ?>
             <?php
             		endif;
 				endwhile;

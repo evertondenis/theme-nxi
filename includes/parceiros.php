@@ -5,7 +5,7 @@
 <section class="parceiros">
 	<div class="container">
 		<div class="row">
-			<h1><span>Nossos</span><br>Parceiros</h1>
+			<h1>Nossos <strong>Parceiros</strong></h1>
 		</div>
 		<div class="distribute-imgs">
 			<?php
@@ -24,7 +24,11 @@
 					$parceiros_query->the_post(); 
 					if (has_post_thumbnail( $post->ID ) ):
                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-                       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" /></a>
+                       <?php if (get_field('url') != '') : ?>
+                       	<a href="<?php echo get_field('url') ?>" title="<?php the_title(); ?>" target="_blank"><img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" /></a>
+                       	<?php else: ?>
+                       		<a href="javascript:void(0);" title="<?php the_title(); ?>" target="_blank"><img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" /></a>
+                       	<?php endif; ?>
             <?php
             		endif;
 				endwhile;

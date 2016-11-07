@@ -15,21 +15,15 @@
                 <p><?php _e('Desculpe, essa página não existe.'); ?></p>
             </section>
         <?php endif; ?>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="bounce" aria-hidden="true"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+          </div>
+        </div>
         <section class="container-cases">
             <div class="container">
 
                 <?php $categories = get_categories("taxonomy=materiais_entries"); ?>
-            
-                <!-- <div class="row">
-                    <nav class="filter-cases">
-                        <ul>
-                            <?php foreach ($categories as $category) : ?>
-                            <li><a href="<?php echo $category->slug ?>" title="<?php echo $category->name ?>"><?php echo $category->name ?></a></li>
-                            <?php endforeach; ?>
-                            <li><a href="" title="Ver todos">Ver todos</a></li>
-                        </ul>
-                    </nav>
-                </div> -->
 
                 <div class="list-cases">
                     <?php
@@ -44,11 +38,11 @@
                     if( $port_query->have_posts() ) : while ($port_query->have_posts()) : $port_query->the_post(); ?>
                     <?php if (has_post_thumbnail( $post->ID ) ): $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumb-cases' ); endif; ?>
 
-                    <?php $terms = get_the_terms( $post->ID , 'materiais_entries' ); foreach ( $terms as $term ) {}?>
+                    <?php //$terms = get_the_terms( $post->ID , 'materiais_entries' ); foreach ( $terms as $term ) {}?>
                     
                     <a href="<?php echo get_field('url') ?>" title="<?php the_title(); ?>" class="box" id="<?php echo $term->slug; ?>">
                         <figure>
-                            <img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+                            <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
                         </figure>
                         <div class="after">
                             <p><?php the_title(); ?></p>

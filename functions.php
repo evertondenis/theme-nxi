@@ -10,6 +10,7 @@ require_once( get_template_directory().'/includes/types/cases_type.php' );
 require_once( get_template_directory().'/includes/types/team_type.php' );
 require_once( get_template_directory().'/includes/types/clientes_type.php' );
 require_once( get_template_directory().'/includes/types/parceiros_type.php' );
+require_once( get_template_directory().'/includes/types/certificados_type.php' );
 require_once( get_template_directory().'/includes/types/destaques_type.php' );
 require_once( get_template_directory().'/includes/types/servicos_type.php' );
 
@@ -36,6 +37,15 @@ add_action('wp_enqueue_scripts', 'scripts_do_template');
 
 add_action( 'after_setup_theme', 'wpt_setup' );
 
+// remove wp version param from any enqueued scripts
+function vc_remove_wp_ver_css_js( $src ) {
+    if ( strpos( $src, 'ver=' ) )
+        $src = remove_query_arg( 'ver', $src );
+    return $src;
+}
+add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+
 function wpt_setup() {  
     register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
     nxi_theme_support();
@@ -43,7 +53,7 @@ function wpt_setup() {
 }
 
 function nxi_theme_support() {
-    add_theme_support( 'post-thumbnails', array( 'post', 'servicos', 'blog', 'ctas', 'page', 'case', 'materiais', 'destaque', 'clientes', 'parceiros', 'portfolio', 'team', 'testimonial' ));
+    add_theme_support( 'post-thumbnails', array( 'post', 'servicos', 'blog', 'ctas', 'page', 'case', 'materiais', 'destaque', 'clientes', 'parceiros', 'certificados', 'portfolio', 'team', 'testimonial' ));
     add_theme_support( 'post-formats', array( 'quote', 'gallery','video', 'audio' ) );
 }
 
