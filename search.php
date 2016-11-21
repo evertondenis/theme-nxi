@@ -12,7 +12,7 @@ $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID
 	<div class="container">
 		<div class="col-blog-esq">
 			<header class="tb-seartch-title">
-				<h3 class="tb-title-1"><?php printf( __( 'Resultado da busca por: %s', 'blog' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
+				<h3 class="tb-title-1"><?php printf( __( 'Resultado da busca por: %s', 'post' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
 			</header>
 			<?php if( have_posts() ) :
 				while ( have_posts() ) : the_post(); ?>

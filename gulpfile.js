@@ -1,5 +1,8 @@
 var gulp 		= require('gulp');
 var	clean 		= require('gulp-clean');
+var concat 		= require('gulp-concat');
+var uglify 		= require('gulp-uglify');
+var es 			= require('event-stream')
 var	sass 		= require('gulp-sass');
 var rename		= require('gulp-rename');
 var sourcemaps	= require('gulp-sourcemaps');
@@ -21,10 +24,24 @@ gulp.task('sass', function() {
 	    .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('uglify', function () {
+	return es.merge([
+		gulp.src(['assets/lib/bootstrap/3.3.6/js/bootstrap.min.js']),
+		gulp.src('assets/js/*.js')
+		.pipe(concat('scripts-all.js'))
+		.pipe(uglify())
+	])
+	.pipe(concat('all.min.js'))
+	.pipe(gulp.dest('assets/js'));
+});
+
 gulp.task('watch', function() {
 	gulp.watch('scss/**/*.scss', ['sass']);
 });
 
 gulp.task('default', function(cb) {
-	return runSequence('clean', ['watch', 'sass'], cb)
+	return runSequence('clean', ['watch', 'uglify', 'sass'], cb)
 });
+
+
+

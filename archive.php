@@ -3,7 +3,7 @@
 <?php
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-$newsArgs = array( 'post_type' => 'blog',
+$newsArgs = array( 'post_type' => 'post',
 					'paged' => $paged
 					);
 
@@ -13,11 +13,11 @@ $tag = substr($page_slug, 0, 3);
 if (is_category( )) {
   $cat = get_query_var('cat');
   $currentcat = get_category ($cat);
-  $newsArgs = array( 'post_type' => 'blog', 'paged' => $paged, 'category_name' => $currentcat->slug);
+  $newsArgs = array( 'post_type' => 'post', 'paged' => $paged, 'category_name' => $currentcat->slug);
 
 } elseif($tag === 'tag') {
 	$currenttag = get_tag_id_by_name(substr($page_slug, 4));
-	$newsArgs = array( 'post_type' => 'blog', 'paged' => $paged, 'tag_id' => $currenttag);
+	$newsArgs = array( 'post_type' => 'post', 'paged' => $paged, 'tag_id' => $currenttag);
 }
 
 $newsLoop = new WP_Query( $newsArgs );

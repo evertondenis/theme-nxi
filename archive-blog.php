@@ -3,7 +3,7 @@
 <?php
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-$newsArgs = array( 'post_type' => 'blog',
+$newsArgs = array( 'post_type' => 'post',
 					'paged' => $paged
 					);
 

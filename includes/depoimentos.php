@@ -17,7 +17,7 @@
 
 			  	<div class="row">
 			  		<div class="col-30">
-			  			<img src="<?php echo get_field('logo_empresa')['url'] ?>" title="<?php the_title(); ?>" />
+			  			<img src="<?php echo get_field('logo_empresa')['url'] ?>" alt="imagem empresa <?php the_title(); ?>" />
 			  		</div>
 			  		<div class="col-50">
 			  			<?php if (has_post_thumbnail( $post->ID ) ): ?>

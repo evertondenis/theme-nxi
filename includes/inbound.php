@@ -2,10 +2,14 @@
 	<div class="container">
 		<?php
 		global $post;
-		$args = array( 
-				'posts_per_page' => 1,
-				'category_name' => 'inbound-marketing',
-				'orderby' => rand
+		$args = array(
+			'posts_per_page' => 1,
+			'post_type' => 'inbound',
+			'post_status' => 'publish',
+			'orderby' => rand
+				// 'posts_per_page' => 1,
+				// 'category_name' => 'inbound-marketing',
+				// 'orderby' => rand
 				);
 		$inboundPost = get_posts( $args );
 

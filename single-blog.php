@@ -1,7 +1,7 @@
 <?php include('header-blog.php'); ?>
 
 <?php
-$newsArgs = array( 'post_type' => 'blog');
+$newsArgs = array( 'post_type' => 'post');
 
 $newsLoop = new WP_Query( $newsArgs );
 

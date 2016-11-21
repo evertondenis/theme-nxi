@@ -7,6 +7,7 @@
 require_once( get_template_directory().'/includes/types/testimonial_type.php' );
 require_once( get_template_directory().'/includes/types/materiais_type.php' );
 require_once( get_template_directory().'/includes/types/cases_type.php' );
+require_once( get_template_directory().'/includes/types/inbound_type.php' );
 require_once( get_template_directory().'/includes/types/team_type.php' );
 require_once( get_template_directory().'/includes/types/clientes_type.php' );
 require_once( get_template_directory().'/includes/types/parceiros_type.php' );
@@ -17,19 +18,21 @@ require_once( get_template_directory().'/includes/types/servicos_type.php' );
 require_once('wp_bootstrap_navwalker.php');
 
 function scripts_do_template() {
-    wp_register_script('bootstrap', get_template_directory_uri().'/assets/lib/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
-    wp_register_script('headroom', get_template_directory_uri().'/assets/js/headroom.js', array(), '', true );
-    wp_register_script('slide', get_template_directory_uri().'/assets/js/jquery.slides.js', array(), '', true );
-    wp_register_script('scripts', get_template_directory_uri().'/assets/js/scripts.js#asyncload', array(), '', true );
+    // wp_register_script('bootstrap', get_template_directory_uri().'/assets/lib/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
+    // wp_register_script('headroom', get_template_directory_uri().'/assets/js/headroom.js', array(), '', true );
+    // wp_register_script('slide', get_template_directory_uri().'/assets/js/jquery.slides.js', array(), '', true );
+    // wp_register_script('scripts', get_template_directory_uri().'/assets/js/scripts.js', array(), '', true );
+
+    wp_register_script('scripts', get_template_directory_uri().'/assets/js/all.min.js', array(), '', true );
     
     // css template
     wp_enqueue_style( 'style-nxi', get_template_directory_uri() . '/assets/css/nextidea.css',false,'1.0','all');
 
     wp_enqueue_script('style-nxi');
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('bootstrap');
-    wp_enqueue_script('headroom');
-    wp_enqueue_script('slide');
+    // wp_enqueue_script('jquery');
+    // wp_enqueue_script('bootstrap');
+    // wp_enqueue_script('headroom');
+    // wp_enqueue_script('slide');
     wp_enqueue_script('scripts');
 }
 
@@ -465,7 +468,7 @@ class Realty_Widget extends WP_Widget{
         global $post;
         add_image_size( 'realty_widget_size', 90, 51, false );
         $listings = new WP_Query();
-        $listings->query('post_type=blog&posts_per_page=' . $numberOfListings );
+        $listings->query('post_type=post&posts_per_page=' . $numberOfListings );
         if($listings->found_posts > 0) {
             echo '<ul class="realty_widget">';
             while ($listings->have_posts()) {
