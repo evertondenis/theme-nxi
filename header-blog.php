@@ -8,6 +8,7 @@
         <meta name="author" content="">
 
         <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo bloginfo('template_url');?>/images/favicon/favicon-16x16.png">
 
         <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
 

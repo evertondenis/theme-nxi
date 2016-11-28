@@ -529,19 +529,19 @@
         }
 
         &:hover {
-            background-color: $purple !important;
-            border-color: $purple !important;
+            background-color: $white !important;
+            border-color: $white !important;
             left: -10px;
-            color: $white;
+            color: $orange;
             text-decoration: none;
 
             i {
                 margin-left: 20px;
-                color: $white;
+                color: $orange;
             }
             span {
                 left: -5px;
-                color: $white;
+                color: $orange;
             }
         }
     }

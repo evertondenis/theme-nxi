@@ -15,7 +15,7 @@
 				a {
 					font-family: $roboto-bold;
 					font-size: 24px;
-					color: $purple;
+					color: $orange;
 				}
 			}
 
@@ -65,14 +65,14 @@
 		margin: 25px 0;
 		font-size: 32px;
 		font-family: $roboto-bold;
-		color: $purple;
+		color: $orange;
 		text-decoration: none;
 		line-height: 100%;
 
 		a {
 			font-family: $roboto-bold;
 			font-size: 22px;
-			color: $purple;
+			color: $orange;
 			text-decoration: none;
 
 			&:hover {
@@ -82,7 +82,7 @@
 			&:visited {
 				font-family: $roboto-bold;
 				font-size: 22px;
-				color: $purple;
+				color: $orange;
 				text-decoration: none;
 			}
 		}
@@ -110,7 +110,7 @@
         transition: all .2s ease-out;
 
         &:focus {
-            border: 2px solid $purple;
+            border: 2px solid $orange;
             outline: none;
         }
     }
@@ -130,7 +130,7 @@
         transition: all .2s ease-out;
 
         &:focus {
-            border: 2px solid $purple;
+            border: 2px solid $orange;
             outline: none;
         }
     }
@@ -143,18 +143,20 @@
 		color: #fff;
 
 		h1 {
-			font-family: $roboto-regular;
-			font-size: 67px;
+			font-family: 'museo-300';
+			font-size: 60px;
 			color: #fff;
 
 			strong {
-				font-family: $roboto-bold;
-				font-size: 67px;
+				font-family: 'museo-900';
+				font-size: 60px;
 				color: #fff;
+				font-weight: normal;
 			}
 		}
 
 		h2 {
+			margin-top: 0;
 			font-family: $roboto-light;
 			font-size: 20px;
 			color: #fff;
@@ -196,14 +198,14 @@
 
 	.crumbs {
 		font-family: $roboto-regular;
-		color: $purple;
+		color: $orange;
 		font-size: 14px;
 		text-transform: uppercase;
 
 		hr {
 			margin: 0;
 		    height: 7px;
-		    background-color: $purple;
+		    background-color: $orange;
 		    width: 5%;
 		}
 
@@ -217,7 +219,7 @@
 
 				a {
 					font-family: $roboto-bold;
-					color: $purple;
+					color: $orange;
 					font-size: 14px;
 					text-transform: uppercase;
 					text-decoration: none;
@@ -228,7 +230,7 @@
 
 					&:visited {
 						font-family: $roboto-bold;
-						color: $purple;
+						color: $orange;
 						text-decoration: none;
 					}
 				}
@@ -237,6 +239,12 @@
 	}
 
 	.btn-purple {
+		text-decoration: none;
+		color: $white !important;
+		&:visited { color: $white !important; text-decoration: none }
+	}
+
+	.btn-orange {
 		text-decoration: none;
 		color: $white !important;
 		&:visited { color: $white !important; text-decoration: none }
@@ -253,7 +261,7 @@
 
 			i {
 				margin-right: 10px;
-				color: $purple;
+				color: $orange;
 				font-size: 21px;
 			}
 		}
@@ -272,7 +280,7 @@
 	        transition: all .2s ease-out;
 
 	        &:focus {
-	            border: 2px solid $purple;
+	            border: 2px solid $orange;
 	            outline: none;
 	        }
 		}
@@ -287,8 +295,8 @@
 		    font-size: 16px;
 		    text-transform: uppercase;
 		    color: $white;
-		    background-color: $purple;
-		    border-color: $purple;
+		    background-color: $orange;
+		    border-color: $orange;
 		    -webkit-transition: all .2s ease-out;
 		    -moz-transition: all .2s ease-out;
 		    -ms-transition: all .2s ease-out;
@@ -296,18 +304,19 @@
 		    transition: all .2s ease-out;
 
 		    &:hover {
-			    background-color: $orange !important;
-			    border-color: $orange !important;
+			    background-color: $white !important;
+			    border-color: $white !important;
 		    }
 		}
 	}
 }
 
 .sidebar {
+	padding-top: 5px;
 	h3 {
 		font-family: $roboto-bold;
 		font-size: 20px;
-		color: #4A4177;
+		color: #24222B;
 		text-transform: uppercase;
 	}
 
@@ -331,7 +340,7 @@
 		border: 1px solid #CCCED8;
 
 		&:focus {
-            border: 1px solid $purple;
+            border: 1px solid $orange;
             outline: none;
         }
 	}
@@ -340,7 +349,7 @@
 		border: 1px solid #CCCED8;
 
 		&:focus {
-            border: 1px solid $purple;
+            border: 1px solid $orange;
             outline: none;
         }
 	}
@@ -359,19 +368,19 @@
             display: inline;
             font-family: $roboto-regular;
             font-size: 16px;
-            color: $purple;
+            color: #485056;
             text-decoration: none;
             text-transform: uppercase;
 
             &:hover {
-            	border-bottom: 1px solid $purple;
+            	border-bottom: 1px solid $orange;
             }
 
             &:visited {
             	display: inline;
 	            font-family: $roboto-regular;
 	            font-size: 16px;
-	            color: $purple;
+	            color: #485056;
 	            text-decoration: none;
             }
         }
@@ -383,6 +392,7 @@
 	            	font-family: FontAwesome;
 	            	content: '\f054';
 	            	font-size: 13px;
+	            	color: $orange;
 	            }
         	}
         }
@@ -395,6 +405,24 @@
     // }
 }
 
+.sb-newsletter {
+	text-align: center;
+
+	.content {
+		h3 {
+			font-family: $roboto-light;
+			font-size: 28px;
+			text-transform: none;
+			color: #FFF;
+
+			strong {
+				font-family: $roboto-bold;
+			}
+		}
+		background: #333C41 url(../../images/bg-newsletter-sidebar.jpg) no-repeat;
+	}
+}
+
 .tags {
 	padding: 15px 25px;
 	font-family: $roboto-bold;
@@ -403,7 +431,7 @@
 
 	i {
 		transform: scaleX(-1);
-		color: $purple;
+		color: $orange;
 		font-size: 22px;
 		margin-right: 8px;
 	}
@@ -619,6 +647,7 @@
 		.chamada-news {
 			width: 550px;
 			h1 {
+				margin-bottom: 10px;
 				font-size: 67px;
 			}
 		}
@@ -651,7 +680,7 @@
     i { transform: scaleX(-1); }
 
     &:hover {
-    	background-color: $purple;
+    	background-color: $orange;
     	color: $white;
     }
 }

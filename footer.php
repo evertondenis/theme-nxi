@@ -11,6 +11,7 @@
                             <li><a href="https://www.linkedin.com/company/next-idea-estrategia-digital" target="_blank" class="ico-linkedin" title="link Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i><span>linkedin</span></a></li>
                             <li><a href="https://www.instagram.com/nextideadigital/" target="_blank" class="ico-instagram" title="link Instagram"><i class="fa fa-instagram" aria-hidden="true"></i><span>instagram</span></a></li>
                         </ul>
+                        <div class="clear"></div>
                     </div>
             	</div>
             	<div class="container">

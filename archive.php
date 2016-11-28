@@ -53,7 +53,7 @@ $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID
 								<p><?php the_excerpt(); ?></p>
 								<span class="author"><?php the_author() ?>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;</span><span class="tb-post-time"><time datetime="<?php the_time('Y-m-d g:i') ?>"> <?php the_time('j') ?> <?php the_time('F') ?> <?php the_time('Y') ?></time></span>
 								<div class="continuar-lendo">
-									<a class="btn btn-purple btn-lg" href="<?php the_permalink() ?>" title="Continuar lendo: <?php the_title(); ?>"><span>Continuar Lendo</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+									<a class="btn btn-orange btn-lg" href="<?php the_permalink() ?>" title="Continuar lendo: <?php the_title(); ?>"><span>Continuar Lendo</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 								</div>
 							</div>
 						</div>

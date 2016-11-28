@@ -16,7 +16,7 @@ $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID
 <section class="blog-archive">
 	<div class="row" style="background: #fff url(<?php echo $imagebg[0] ?>) no-repeat; height: 540px; padding-top:190px;">
 		<div class="container">
-			<div class="chamada-news"><?php echo $chamada; ?></div>
+			<div class="chamada-news smile"><?php echo $chamada; ?></div>
 			<div class="form-news"><?php echo do_shortcode( '[contact-form-7 id="75" title="NEW Newsletter"]' ); ?></div>
 		</div>
 	</div>
@@ -42,7 +42,7 @@ $imagebg = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID
 								<span class="tb-post-time"><time datetime="<?php the_time('Y-m-d g:i') ?>"> <?php the_time('j') ?> <?php the_time('F') ?> <?php the_time('Y') ?></time></span>
 								<span class="author">&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;<?php comments_number('No Comments', '1 Comment', '% Comments' );?></span>
 								<div class="continuar-lendo">
-									<a class="btn btn-purple btn-lg" href="<?php the_permalink() ?>" title="Continuar lendo: <?php the_title(); ?>"><span>Continuar Lendo</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+									<a class="btn btn-orange btn-lg" href="<?php the_permalink() ?>" title="Continuar lendo: <?php the_title(); ?>"><span>Continuar Lendo</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 								</div>
 							</div>
 						</div>

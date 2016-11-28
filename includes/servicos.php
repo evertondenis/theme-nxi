@@ -37,26 +37,18 @@ $page_data = get_page_by_path($page_slug);
                     
                     <div class="box-servico">
                         <figure>
-                            <?php if(get_field('url') != "" && get_field('url') != "#") :
-                            ?>
-                                <a href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="imagem link <?php the_title(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" /></a>
-                            <?php else: ?>
-                                <img src="<?php echo $image[0]; ?>" alt="imagem sobre <?php the_title(); ?>" />
-                            <?php endif ?>
+                            <img src="<?php echo $image[0]; ?>" alt="imagem sobre <?php the_title(); ?>" />
                         </figure>
 
                         <div class="info-servico">
-                        	<p class="title" style="<?php echo $bg ?>">
-                            <?php if(get_field('url') != "" && get_field('url') != "#") :
-                            ?>
-                                <a style="<?php echo $bg ?>" href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="link <?php the_title(); ?>"><?php the_title(); ?></a>
-                            <?php else: ?>
+                        	<p class="title" style="<?php //echo $bg ?>">
                                 <?php the_title(); ?>
-                            <?php endif ?>
                             </p>
                         	<p><?php the_excerpt(); ?></p>
-                        	<!-- <a href="<?php //echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="<?php //the_title(); ?>">Saiba mais</a> -->
-                        	
+                            <p><?php if(get_field('url') != "" && get_field('url') != "#") :
+                            ?>
+                                <a href="<?php echo get_field('url') ? get_field('url') : the_permalink(); ?>" title="Conheça <?php the_title(); ?>" class="btn btn-orange btn-lg"><span>Conheça</span> <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            <?php endif ?></p>                        	
                         </div>
                     </div>
 

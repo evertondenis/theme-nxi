@@ -39,11 +39,12 @@
                         ?>
                         <section class="sobre-nxi-servicos">
                             <div class="container">
-                                <div class="col-md-7">
+                                <div class="col-md-7 hidden-xs hidden-sm">
                                     <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                 </div>
                                 <div class="col-md-5">
                                     <h1><?php the_field('servico_titulo_direita_' . $flag); ?></h1>
+                                    <img class="img-responsive hidden-lg hidden-md" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                     <p><?php the_field('servico_texto_direita_' . $flag); ?></p>
                                 </div>
                             </div>
@@ -56,9 +57,10 @@
                                 <div class="container">
                                     <div class="col-md-5">
                                          <h1><?php the_field('servico_titulo_direita_' . $flag); ?></h1>
+                                         <img class="img-responsive hidden-lg hidden-md hidden-sm" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                          <p><?php the_field('servico_texto_direita_' . $flag); ?></p>
                                      </div>
-                                     <div class="col-md-7 a-l">
+                                     <div class="col-md-7 hidden-xs a-l">
                                         <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                     </div>
                                 </div>

@@ -241,6 +241,8 @@ section {
         color: $orange;
         font-family: 'museo-100';
     }
+
+    
 }
 
 #inbound-cases {
@@ -315,7 +317,7 @@ section {
 }
 
 .case-list {
-    height: 610px;
+    // height: 610px;
     overflow: hidden;
     color: $white;
     display: flex;
@@ -940,13 +942,13 @@ section {
             justify-content: center;
 
             .box-servico {
-                margin: 0 10px 20px;
+                margin: 0 20px 20px;
+                padding: 15px 10px 0px;
                 color: #4E4E4E;
                 text-decoration: none;
                 flex: 1 0 225px;
                 width: 100%;
-                // background-color: #fff;
-                // border-radius: 5px;
+                transition: all 0.2s ease-out;
 
                 figure {
                     padding: 0px;
@@ -977,7 +979,7 @@ section {
 
                     a {
                         font-family: 'museo-900';
-                        font-size: 24px;
+                        font-size: 22px;
                         &:hover { text-decoration: none; }
                     }
 
@@ -1001,7 +1003,25 @@ section {
 
                     .title {
                         font-family: 'museo-900';
-                        font-size: 24px;
+                        font-size: 22px;
+                        color: #FC6F2E;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &:hover {
+                    background-color: #f0f3f5;
+                    border-radius: 8px;
+                    box-shadow: 0px 6px 21px -7px #888888;
+                }
+
+                .btn {
+                    font-family: "roboto-regular" !important;
+                    font-size: 14px !important;
+                    padding: 8px 10px !important;
+
+                    i {
+                        margin-left: 5px !important;
                     }
                 }
             }
@@ -1401,7 +1421,12 @@ section {
         background-position: 100% 100%;
     }
 }
-
+.smile {
+    height: 265px;
+    background-image: url(../../images/smile-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 95% 103%;
+}
 .contato {
     min-height: 740px;
     display: -ms-flex;
@@ -1768,7 +1793,97 @@ footer {
 
 .no-padding { padding: 0; }
 
+@media (min-width: 768px) {
+    .case-list {
+        height: 610px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 992px) {
+    .depoimentos {
+        .col-30 {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width : 480px) {
+    .img-quotes {
+        width: 50%;
+    }
+
+    .logo-footer { 
+        margin: 0 auto;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    .inbound {
+        img { width: 100%; height: auto; }
+    }
+
+    .depoimentos {
+        .slidesjs-container {
+            height: 330px !important;
+        }
+
+        #slides {
+            top: -50px;
+            height: auto;
+
+            p {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+
+        .col-30 {
+            float: none;            
+            margin-top: 0px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .col-40 {
+            float: none;
+            margin: 0 auto;
+            padding-top: 0;
+            width: 60%;
+
+            .img-quotes {
+                left: -30px;
+            }
+        }
+
+        .col-50 {
+            display: none;
+        }
+
+        a.slidesjs-previous {
+            top: 40%;
+        }
+
+        a.slidesjs-next {
+            top: 40%;
+        }
+    }
+
+    footer {
+        ul {
+            float: none;
+            margin: 0 auto;
+            width: 310px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
+    .overlay-image2 {
+        display: none;
+    }
+
     h1 {
         font-size: $md-title;
         span {
@@ -1778,6 +1893,10 @@ footer {
 
     h2 {
         font-size: $md-sub-title;
+
+        a {
+            font-size: 40px;
+        }
     }
 
     .banner {
@@ -1858,6 +1977,12 @@ footer {
     }
     .case-list {
         display: block;
+
+        h2 {
+            a {
+                font-size: 40px;
+            }
+        }
         .col-dir {
             figure {
                 margin-top: 30px;
@@ -1920,7 +2045,7 @@ footer {
     }
 
     .cta {
-        h1 { font-size: 45px; }
+        h1 { font-size: 40px; }
     }
 
     .single-page {
@@ -2007,6 +2132,16 @@ footer {
 
     .nxi-resultados {
         display: none;
+    }
+
+    .newsletter {
+        .smile {
+            background-image: none;
+        }
+    }
+
+    .depoimentos {
+        background-size: 100%;
     }
 
     footer {
