@@ -40,6 +40,8 @@ add_action('wp_enqueue_scripts', 'scripts_do_template');
 
 add_action( 'after_setup_theme', 'wpt_setup' );
 
+remove_action( 'wp_head', 'wp_resource_hints', 2 );
+
 // remove wp version param from any enqueued scripts
 function vc_remove_wp_ver_css_js( $src ) {
     if ( strpos( $src, 'ver=' ) )
@@ -274,6 +276,7 @@ function registra_posts_blog() {
 add_action( 'init', 'registra_posts_blog' );
 // add_theme_support( 'post-thumbnails', array('post', 'blog', 'custom-type'));
 
+
 function get_tag_id_by_name($tag_name) {
     global $wpdb;
     $tag_ID = $wpdb->get_var("SELECT * FROM ".$wpdb->terms." WHERE  `name` =  '".$tag_name."'");
@@ -497,3 +500,9 @@ function register_realty_widget() {
 add_action('widgets_init', 'register_realty_widget');
 
 /* END POSTS MAIS VISUALIZADOS */
+
+
+function custom_menu_page_removing() {
+    remove_menu_page( 'edit.php?post_type=blog' );
+}
+add_action( 'admin_menu', 'custom_menu_page_removing' );
